@@ -1,0 +1,189 @@
+img{
+    width:100%;
+    max-width:83px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Inter, sans-serif;
+}
+
+p{
+color:gray;
+}
+
+.top-container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:40px;
+}
+
+.top-bar{
+    background: #f8f8f8;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.telefone{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.telefone img{
+    width:18px;
+    height:18px;
+}
+
+.links-topo{
+    display: flex;
+    gap: 30px;
+}
+
+.links-topo a{
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.links-topo a:hover{
+    color: lack;
+}
+
+.Cabeçalho{
+    font-family:Inter, sans-serif;
+    color: #095169;
+}
+
+.btn-login{
+    color:black;
+    text-decoration: none;
+}
+
+#Meio-nav{
+  width: 100%;
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 20px 40px -20px rgba(0,0,0,0.7);
+  overflow-x: auto;          /* permite rolar horizontalmente */
+  scrollbar-width: none;     /* esconde a barra de rolagem (Firefox) */
+  -webkit-overflow-scrolling: touch;
+}
+
+#Meio-nav::-webkit-scrollbar{ display:none; } /* esconde a barra de rolagem (Chrome/Safari) */
+
+#Meio-nav{
+  position: relative;
+  color: gray;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 10px 18px;
+  white-space: nowrap;    /* impede que o texto quebre linha */
+  transition: color 0.25s ease; /*Essa duas últimas linhas eu não sei o que fazem,ent talvez vamos excluir*/
+  background:0.25s ease;
+}
+
+#Meio-nav a:hover{
+  border-color:Black; /*Moda quando passasmos o mouse em cima do link*/
+}
+
+#Meio-nav a:focus-visible{
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;      /* contorno visível ao navegar com Tab (acessibilidade) */
+}
+
+@media (min-width: 640px){
+  #Meio-nav::before,
+  #Meio-nav::after{ display: none; } /*Aqui ele faz um ajuste das medidas*/
+  #Meio-nav{ justify-content: center; }
+}
+
+#Baixo-nav{
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 999px;      /* deixa a barra em formato de pílula */
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 20px 40px -20px rgba(0,0,0,0.7);
+  overflow-x: auto;          /* permite rolar horizontalmente */
+  scrollbar-width: none;     /* esconde a barra de rolagem (Firefox) */
+  -webkit-overflow-scrolling: touch;
+}
+
+#Baixo-nav::-webkit-scrollbar{ display:none; } /* esconde a barra de rolagem (Chrome/Safari) */
+
+#Baixo-nav a{
+  position: relative;
+  color: gray;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 999px;   /* deixa o link com forma de pírula*/
+  white-space: nowrap;    /* impede que o texto quebre linha */
+  flex-shrink: 0;         /* impede que os links encolham ao rolar */
+  transition: color 0.25s ease; /*Essa duas últimas linhas eu não sei o que fazem,ent talvez vamos excluir*/
+  background:0.25s ease;
+}
+
+#Baixo-nav a:hover{
+  background-color: rgb(200, 200, 200);
+  color: Black;
+}
+
+#Baixo-nav a.active{
+  color: #059B9A; /*Moda quando está ativo,ent por isso ussamos o .active.Além da cor do texto temos que alterar a cor da logo*/
+}
+
+#Baixo-nav a:focus-visible{
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;      /* contorno visível ao navegar com Tab (acessibilidade) */
+}
+
+.Modo-nav{
+  position: relative;
+  width: 100%;
+}
+
+.Modo-nav::before,
+.Modo-nav::after{
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 36px;
+  pointer-events: none;   /* não bloqueia cliques */
+  z-index: 2;
+  border-radius: 999px;
+}
+
+.Modo-nav::before{
+  left: 0;
+  background: linear-gradient(90deg, #150F2A, transparent);
+}
+
+.Modo-nav::after{
+  right: 0;
+  background: linear-gradient(270deg, #150F2A, transparent);
+}
+
+@media (min-width: 640px){
+  .Modo-nav::before,
+  .Modo-nav::after{ display: none; } /*Aqui ele faz um ajuste das medidas*/
+  #Baixo-nav{ justify-content: center; }
+}
