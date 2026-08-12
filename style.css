@@ -60,7 +60,7 @@ color:gray;
     color: lack;
 }
 
-.Cabeçalho{
+.cabeçalho{
     font-family:Inter, sans-serif;
     color: #095169;
 }
@@ -68,6 +68,13 @@ color:gray;
 .btn-login{
     color:black;
     text-decoration: none;
+}
+
+.box-search{
+  width: 70%;
+  align-items: center;
+  border-color: #9fd86b;
+  border-width: 5px;
 }
 
 #Meio-nav{
