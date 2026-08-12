@@ -71,19 +71,35 @@ color:gray;
 }
 
 .box-search{
-  width: 70%;
+  margin: auto;
+  border-top-color: #9fd86b;
   align-items: center;
-  border-color: #9fd86b;
   border-width: 5px;
+}
+
+.boas-vindas{
+  color: white;
+}
+
+.search{
+  background-color: #095169;
+  font-family: Inter, sans-serif;
+  color:white;
+  text-decoration: none;
+  align-items: right;
+  border-radius: 999px; 
+  width: 75px;
+  height: 30px;
+  border-color: none;
 }
 
 #Meio-nav{
   width: 100%;
   border: 1px solid var(--line);
-  padding: 8px 10px;
+  padding: 10px 12px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 20px;  /*Da espaçamento entre dois itens*/
   box-shadow: 0 20px 40px -20px rgba(0,0,0,0.7);
   overflow-x: auto;          /* permite rolar horizontalmente */
   scrollbar-width: none;     /* esconde a barra de rolagem (Firefox) */
