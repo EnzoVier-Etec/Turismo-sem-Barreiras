@@ -1,67 +1,574 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Turismo sem Barreiras</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- Barra superior -->
     <div class="top-bar">
         <div class="top-container">
+
             <div class="telefone">
                 <img src="assets/telefone.png" alt="Telefone">
-            <span>Central 0800 123 4567</span>
+                <span>Central 0800 123 4567</span>
             </div>
 
             <div class="links-topo">
-            <a href="#">Seja uma agência parceira</a>
-            <a href="#">Ajuda</a>
+                <a href="#">Seja uma agência parceira</a>
+                <a href="#">Ajuda</a>
             </div>
+
         </div>
     </div>
 
-    <header>
-    <div> 
-    <nav id="Meio-nav"> 
-        <div class="logo">
-        <img src="assets/logo.png" alt="Logo"> 
+
+    <!-- Cabeçalho -->
+    <header class="header">
+
+        <div class="header-container">
+
+            <div class="logo-area">
+
+                <img src="assets/logo.png" >
+
+                <div class="logo-text">
+                    <h1>Turismo <span>sem Barreiras</span></h1>
+                    <p>Viagens acessíveis pelo Brasil</p>
+                </div>
+
+            </div>
+
+            <a href="login.html" class="btn-login">
+                <img src="assets/perfil.png" >
+                 Entrar ou cadastrar
+            </a>
+
         </div>
-        <h1 class="cabeçalho ">Turismo sem Barreiras</h1>
-        <p>Viagens acessíveis pelo Brasil</p>
-        <a href="login.html" class="btn-login">
-        Entrar ou cadastrar 
-        </a>
-    </nav>
-    </div>
+
     </header>
 
-<div class="Modo-nav">
-<nav id="Baixo-nav">
-    <a href="#" class="active">Pacotes</a>
-    <a href="#">Destinos</a>
-    <a href="#">Agências</a>
-    <a href="#">Como funciona</a>
-    <a href="#">Sobre nós</a>
-    <a href="#">Central de Ajuda</a>
-</nav>
-</div>
 
-<div>
-    <img href="">
-    <h1 class="boas-vindas">Viajando pelo o Brasil sem barreiras</h1>
-    <p>Pacotes terrestres com transporte adaptado, hospedagem acessível e equipe especializada para acompanhar cada passeio.</p>
-</div>
+    <!-- Menu -->
+    <div class="menu-container">
 
-<div class="box-search">
-    <h2 class="cabeçalho">Encontre a próxima viagem acessível</h2>
-    <input type="text" placeholder="Para onde vamos?" class="Local">
-    <button class="search">Buscar</button>
-</div>
+        <nav id="menu">
 
-    <section class="principal">
+            <a href="#" class="active">
+                 <img src="assets/pacotes.png" >
+                <span>Pacotes</span>
+            </a>
+
+            <a href="#">
+               <img src="assets/destinos.png" >
+                 <span>Destinos</span>
+            </a>
+
+            <a href="#">
+                <img src="assets/agencias.png" >
+                <span>Agências</span>
+            </a>
+
+            <a href="#">
+                <img src="assets/comofunciona.png" >
+                <span>Como funciona</span>
+            </a>
+
+            <a href="#">
+                <img src="assets/sobrenos.png" >
+                <span>Sobre nós</span>
+            </a>
+
+            <a href="#">
+                <img src="assets/centraldeajuda.png" >
+                <span>Central de ajuda</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- Banner principal -->
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-tag">
+                ✦ Turismo acessível pelo Brasil
+            </div>
+
+            <h2>
+                Viaje pelo Brasil
+                <span>sem barreiras</span>
+            </h2>
+
+            <p>
+                Pacotes terrestres com transporte adaptado, hospedagem
+                acessível e equipe especializada para acompanhar cada passeio.
+            </p>
+
+            <div class="box-search">
+
+                <h3>Encontre a próxima viagem acessível</h3>
+
+                <div class="search-fields">
+
+                    <div class="input-box">
+                        <img src="assets/destinos.png" >
+                        <input
+                            type="text"
+                            placeholder="Para onde vamos?"
+                        >
+                    </div>
+
+                    <div class="input-box">
+                        <img src="assets/datas.png" >
+                        <input
+                            type="text"
+                            placeholder="dd/mm/aaaa"
+                        >
+                    </div>
+
+                    <div class="input-box">
+                        <img src="assets/pessoas.png" >
+                        <select>
+                            <option>1 viajante</option>
+                            <option>2 viajantes</option>
+                            <option>3 viajantes</option>
+                            <option>4 viajantes</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <img src="assets/sobrenos.png" >
+                        <select>
+                            <option>Qualquer necessidade</option>
+                            <option>Acessibilidade motora</option>
+                            <option>Acessibilidade visual</option>
+                            <option>Acessibilidade auditiva</option>
+                        </select>
+                    </div>
+
+                    <button class="search">
+                        🔍 Buscar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </section>
+
+
+    <!-- Selo -->
+    <section class="selo-section">
+
+        <div class="selo">
+
+            <div class="selo-icon">
+                ♢
+            </div>
+
+            <div>
+                <h3>Selo Turismo sem Barreiras</h3>
+
+                <p>
+                    Toda agência e pacote passam por auditoria de acessibilidade.
+                    Escolha entre Bronze, Prata ou Ouro conforme o nível verificado.
+                </p>
+            </div>
+
+            <a href="#">
+                Saiba mais &gt;
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Destinos -->
+    <section class="destinos">
+
+        <div class="section-title">
+
+            <h2>Destinos populares</h2>
+
+            <a href="#">Ver todos →</a>
+
+        </div>
+
+
+        <div class="destinos-grid">
+
+            <article class="card">
+
+                <div class="card-image">
+
+                    <img src="assets/rio.jpg" alt="Rio de Janeiro">
+
+                    <span class="selo-card">
+                        ◉ Selo Ouro
+                    </span>
+
+                </div>
+
+                <div class="card-content">
+
+                    <div class="cidade-avaliacao">
+
+                        <div>
+                            <h3>Rio de Janeiro</h3>
+                            <small>RJ · Brasil</small>
+                        </div>
+
+                        <span>★ 4.8</span>
+
+                    </div>
+
+                    <p>A partir de</p>
+
+                    <strong>R$ 1.290</strong>
+
+                    <button>Ver pacotes</button>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-image">
+
+                    <img src="assets/foz.jpg" alt="Foz do Iguaçu">
+
+                    <span class="selo-card">
+                        ◉ Selo Ouro
+                    </span>
+
+                </div>
+
+                <div class="card-content">
+
+                    <div class="cidade-avaliacao">
+
+                        <div>
+                            <h3>Foz do Iguaçu</h3>
+                            <small>PR · Brasil</small>
+                        </div>
+
+                        <span>★ 4.8</span>
+
+                    </div>
+
+                    <p>A partir de</p>
+
+                    <strong>R$ 1.590</strong>
+
+                    <button>Ver pacotes</button>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-image">
+
+                    <img src="assets/gramado.jpg" alt="Gramado">
+
+                    <span class="selo-card">
+                        ◉ Selo Prata
+                    </span>
+
+                </div>
+
+                <div class="card-content">
+
+                    <div class="cidade-avaliacao">
+
+                        <div>
+                            <h3>Gramado</h3>
+                            <small>RS · Brasil</small>
+                        </div>
+
+                        <span>★ 4.8</span>
+
+                    </div>
+
+                    <p>A partir de</p>
+
+                    <strong>R$ 1.890</strong>
+
+                    <button>Ver pacotes</button>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-image">
+
+                    <img src="assets/salvador.jpg" alt="Salvador">
+
+                    <span class="selo-card">
+                        ◉ Selo Prata
+                    </span>
+
+                </div>
+
+                <div class="card-content">
+
+                    <div class="cidade-avaliacao">
+
+                        <div>
+                            <h3>Salvador</h3>
+                            <small>BA · Brasil</small>
+                        </div>
+
+                        <span>★ 4.8</span>
+
+                    </div>
+
+                    <p>A partir de</p>
+
+                    <strong>R$ 1.490</strong>
+
+                    <button>Ver pacotes</button>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-image">
+
+                    <img src="assets/bonito.jpg" alt="Bonito">
+
+                    <span class="selo-card">
+                        ◉ Selo Ouro
+                    </span>
+
+                </div>
+
+                <div class="card-content">
+
+                    <div class="cidade-avaliacao">
+
+                        <div>
+                            <h3>Bonito</h3>
+                            <small>MS · Brasil</small>
+                        </div>
+
+                        <span>★ 4.8</span>
+
+                    </div>
+
+                    <p>A partir de</p>
+
+                    <strong>R$ 2.190</strong>
+
+                    <button>Ver pacotes</button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Três passos -->
+    <section class="passos">
+
+        <div class="passos-title">
+
+            <h2>Sua viagem em 3 passos</h2>
+
+            <p>
+                A gente cuida de tudo — passagem, hospedagem,
+                transporte adaptado e equipe de apoio.
+            </p>
+
+        </div>
+
+
+        <div class="passos-grid">
+
+            <div class="passo">
+
+                <div class="passo-icon">⌕</div>
+
+                <h3>1. Escolha o destino</h3>
+
+                <p>
+                    Filtre por tipo de deficiência, transporte
+                    adaptado e hospedagem acessível.
+                </p>
+
+            </div>
+
+
+            <div class="passo">
+
+                <div class="passo-icon">✓</div>
+
+                <h3>2. Reserve com segurança</h3>
+
+                <p>
+                    A agência confirma vagas, guia especializado
+                    e detalhes da viagem.
+                </p>
+
+            </div>
+
+
+            <div class="passo">
+
+                <div class="passo-icon">▦</div>
+
+                <h3>3. Aproveite sem preocupação</h3>
+
+                <p>
+                    Do embarque ao passeio, equipe treinada
+                    acompanha todo o roteiro.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Acessibilidade e agência -->
+    <section class="agencia-section">
+
+        <div class="acessibilidade">
+
+            <h2>
+                Acessibilidade auditada em cada detalhe
+            </h2>
+
+            <p>
+                Nossas agências parceiras entregam checklists
+                completos para você viajar com confiança.
+            </p>
+
+            <div class="recursos">
+
+                <span>✓ Transporte adaptado</span>
+                <span>✓ Hospedagem acessível</span>
+                <span>✓ Passeios acessíveis</span>
+                <span>✓ Guia especializado</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="agencia-card">
+
+            <h2>É agência de viagem?</h2>
+
+            <p>
+                Digitalize sua operação, alcance viajantes PCD
+                do Brasil todo e conquiste o Selo Turismo sem Barreiras.
+            </p>
+
+            <button>
+                Cadastrar minha agência
+                &nbsp; &gt;
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Botão de chat -->
+    <button class="chat">
+        <img src="assets/batepapo.png" >
+    </button>
+
+
+    <!-- Rodapé -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                
+                <h3><img src="assets/logo.png" > Turismo sem Barreiras</h3>
+
+                <p>
+                    Conectamos viajantes com deficiência a
+                    pequenas agências especializadas em
+                    turismo acessível pelo Brasil.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>EXPLORAR</h4>
+
+                <a href="#">Pacotes</a>
+                <a href="#">Destinos</a>
+                <a href="#">Agências parceiras</a>
+                <a href="#">Como funciona</a>
+
+            </div>
+
+
+            <div>
+
+                <h4>INSTITUCIONAL</h4>
+
+                <a href="#">Sobre nós</a>
+                <a href="#">Central de ajuda</a>
+                <a href="#">Selo de Acessibilidade</a>
+                <a href="#">Termos & Privacidade</a>
+
+            </div>
+
+
+            <div>
+
+                <h4>FALE CONOSCO</h4>
+
+                <p>☎ 0800 123 4567</p>
+                <p>✉ ola@turismosembarreiras.com.br</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
     <script src="index.js"></script>
+
 </body>
+
 </html>
