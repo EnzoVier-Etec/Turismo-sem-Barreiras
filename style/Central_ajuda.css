@@ -12,24 +12,6 @@ body {
     background: white;
 }
 
-h1 {
-    font-size: 20px;
-}
-
-h3 {
-    font-family: 16px;
-}
-
-p {
-    font-size: 12px;
-    color: #4D4D4D
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
 a {
     text-decoration: none;
 }
@@ -37,6 +19,19 @@ a {
 button {
     font-family: inherit;
     cursor: pointer;
+}
+
+h1 {
+    font-size: 20px;
+    display: flex;
+}
+
+p {
+    font-size: 12px;
+    color: #4D4D4D;
+
+    margin-top: 5px;
+    margin-bottom: 70px;
 }
 
 /* Barra superior */
@@ -191,224 +186,25 @@ button {
     color: #059b9a;
 }
 
-/* Caixa de busca */
-.box-search {
-    width: 100%;
-
-    background: white;
-
-    border: 3px solid #9fd86b;
-    border-radius: 20px;
-
-    padding: 15px 20px;
-    margin-top: 27px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.box-search h3 {
-    color: #0c0636;
-    font-size: 14px;
-    margin-bottom: 12px;
-}
-
-.search-fields {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.input-box {
-    height: 35px;
-
-    border: 1px solid #ddd;
-    border-radius: 10px;
-
-    display: flex;
-    align-items: center;
-
-    padding: 0 10px;
-
-    color: #059b9a;
-    flex: 1;
-}
-
-.input-box input,
-.input-box select {
-    width: 100%;
-
-    border: none;
-    outline: none;
-
-    font-family: inherit;
-    font-size: 10px;
-
-    color: #555;
-    background: transparent;
-
-    margin-left: 5px;
-}
-
-.search {
-    height: 35px;
-
-    padding: 0 17px;
-
-    border: none;
-    border-radius: 20px;
-
-    background: #0c0636;
-    color: white;
-
-    font-size: 10px;
-    font-weight: 600;
-}
-
-.search:hover {
-    background: #059b9a;
-}
-
-
-/* Selo */
-.selo-section {
-    max-width: 1200px;
-    width: 94%;
-
-    margin: 25px auto;
-}
-
-.selo {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-
-    padding: 18px;
-
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.selo-icon {
-    min-width: 40px;
-    height: 40px;
-
-    border-radius: 10px;
-
-    background: #e4f7ee;
-
+/* Entrar em contato*/
+.but-touch {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    color: #53ba83;
-}
+    margin: 20px 0 20px auto; /* auto na esquerda = vai para a direita */
+    margin-bottom: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
 
-.selo h3 {
-    font-size: 12px;
-}
-
-.selo p {
-    font-size: 9px;
-    color: #666;
-
-    margin-top: 4px;
-}
-
-.selo a {
-    margin-left: auto;
-
-    color: #059b9a;
-
-    font-size: 9px;
-    font-weight: 700;
-}
-
-/* Agência */
-.agencia-section {
-    width: 94%;
-    max-width: 1200px;
-
-    margin: 60px auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 30px;
-}
-
-.acessibilidade h2 {
-    font-size: 21px;
-}
-
-.acessibilidade > p {
-    font-size: 10px;
-
-    color: #777;
-
-    margin-top: 5px;
-
-    max-width: 400px;
-}
-
-.recursos {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 10px;
-
-    margin-top: 20px;
-}
-
-.recursos span {
-    border: 1px solid #ddd;
-
-    border-radius: 8px;
-
-    padding: 8px;
-
-    font-size: 9px;
-
-    color: #555;
-}
-
-.agencia-card {
-    background: linear-gradient(120deg, #095169, #0c0636);
-
-    border-radius: 18px;
-
-    padding: 30px;
-
-    color: white;
-}
-
-.agencia-card h2 {
-    font-size: 23px;
-}
-
-.agencia-card p {
-    color: white;
-
-    font-size: 10px;
-
-    line-height: 1.5;
-
-    margin: 15px 0;
-}
-
-.agencia-card button {
     border: none;
+    background-color: #53BA83;
+}
 
-    background: #9fd86b;
-
-    color: #0c0636;
-
-    border-radius: 20px;
-
-    padding: 10px 25px;
-
-    font-size: 10px;
+.but-touch img{
+    width: 25px;
+    height: 25px;
 }
 
 /* Rodapé */
@@ -518,8 +314,33 @@ footer {
         font-size: 15px;
     }
 
+    #menu {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
     .hero {
         min-height: 500px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .search-fields {
+        flex-direction: column;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+
+    .destinos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .passos-grid {
+        grid-template-columns: 1fr;
     }
 
     .agencia-section {

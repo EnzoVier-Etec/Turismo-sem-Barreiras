@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo sem Barreiras</title>
-    <link rel="stylesheet" href="style/Login.css">
+    <link rel="stylesheet" href="style/Cadastrar.css">
 </head>
 
 <body>
@@ -92,13 +92,34 @@
         <div class="user-data">
 
         <div class="tabs">
-            <button class="tab active" onclick="window.location.href='Login.html'">Entrar</button>
-            <button class="tab" onclick="window.location.href='Cadastrar.html'">Cadastrar</button>
+            <button class="tab" onclick="window.location.href='Login.html'">Entrar</button>
+            <button class="tab active" onclick="window.location.href='Cadastrar.html'">Cadastrar</button>
         </div>
 
 
-        <h2>Entrar na sua conta</h2>
-        <p>Acesse suas viagens, favoritos e reservas.</p>
+        <h2>Criar conta</h2>
+        <p>Escolha o tipo de conta e comece agora.</p>
+
+        <button class="tab" onclick="window.location.href='Login.html'">
+        <div class="icone">
+            <img src="">
+        </div>
+        Agências
+        <p>Ofereço pacotes</p>
+        </button>
+
+        <button class="tab" onclick="window.location.href='Login.html'">
+        <div class="icone">
+            <img src="">
+        </div>
+        Viajante
+        <p>Vou viajar</p>
+        </button>
+
+        <div>
+            <h3>Nome</h3>
+            <input type="text" placeholder="Digite o seu nome completo">
+        </div>
 
         <div>
             <h3>E-mail</h3>
@@ -137,4 +158,5 @@
 </section>
 <script src="sobre_nos.js"></script>
 </body>
+
 </html>

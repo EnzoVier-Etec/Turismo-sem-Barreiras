@@ -1,0 +1,341 @@
+/* Configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #0c0636;
+    background: white;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+p {
+    font-size: 12px;
+    color: #4D4D4D;
+    margin-top: 5px;
+}
+
+input {
+    border: 1px solid #666;
+    border-radius: 5px;
+    width: 94%;
+    max-width: 300px;
+    height: 25px;
+    margin: auto;
+    outline: none; /* evita o contorno azul padrão do navegador no active/focus */
+    margin-bottom: 10px;
+    margin-top: 3px;
+}
+
+input:hover {
+    border: 2px solid #095169;
+}
+
+input:focus,
+input.active {
+    border: 2px solid #095169;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Barra superior */
+.top-bar {
+    height: 36px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.top-container {
+    width: 94%;
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 45px;
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 12px;
+    color: #666;
+}
+
+.telefone img {
+    width: 15px;
+    height: 15px;
+}
+
+.links-topo {
+    display: flex;
+    gap: 35px;
+}
+
+.links-topo a {
+    color: #666;
+    font-size: 12px;
+}
+
+.links-topo a:hover {
+    color: #059b9a;
+}
+
+
+/* Cabeçalho */
+.header {
+    background: white;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.header-container {
+    width: 94%;
+    max-width: 1200px;
+    height: 70px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    font-size: 19px;
+    color: #0c0636;
+}
+
+.logo-text h1 span {
+    color: #059b9a;
+}
+
+.logo-text p {
+    color: #777;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.btn-login {
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 8px 17px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #0c0636;
+    transition: 0.2s;
+}
+
+.btn-login:hover {
+    background: #f5f5f5;
+}
+
+
+/* Menu */
+.menu-container {
+    background: white;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#menu {
+    max-width: 1200px;
+    width: 94%;
+    margin: auto;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+#menu a {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: #666;
+    font-size: 9px;
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+#menu a:hover {
+    color: #059b9a;
+}
+
+#menu a.active {
+    color: #059b9a;
+}
+
+/* Dados para o login */
+
+.user {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto; /* centraliza horizontalmente + respiro em cima/baixo */
+    padding: 30px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid #666;
+    border-radius: 15px;
+}
+.user-box {
+    position: relative;
+    inset: 0;
+}
+
+.user-data {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    width: 94%;
+    max-width: 1200px;
+
+    margin: auto;
+    padding-top: 30px;
+}
+
+/* Botões */
+.tabs {
+    display: flex;
+    background: #f0f0f0;
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 24px;
+}
+
+.tab {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #666;
+}
+
+.tab.active {
+    background: #fff;
+    color: #1a1a3d;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.but-entrar button {
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #0c0636;
+    color: white;
+    font-size: 14px;
+}
+
+.but-google button {
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 30px;
+    margin-bottom:20px;
+    border: 1px solid #666;
+    border-radius: 30px;
+    color: #4D4D4D;
+    font-size: 14px;
+}
+
+.but-google img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Divisor entre os botões */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.divider span {
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider p {
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+
+    .top-container {
+        justify-content: center;
+    }
+
+    .links-topo {
+        display: none;
+    }
+
+    .header-container {
+        height: 65px;
+    }
+
+    .logo-text h1 {
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .agencia-section {
+        grid-template-columns: 1fr;
+    }
+
+}
