@@ -42,10 +42,6 @@ button {
     cursor: pointer;
 }
 
-span {
-    color:#059B9A;
-}
-
 /* Barra superior */
 .top-bar {
     height: 36px;
@@ -200,11 +196,6 @@ span {
     transition: 0.2s;
 }
 
-#menu a img {
-    width: 16px;
-    height: 16px;
-}
-
 #menu a:hover {
     color: #059b9a;
 }
@@ -213,205 +204,76 @@ span {
     color: #059b9a;
 }
 
-/* Missão / Visão / Valores */
+/* Missão / Visão / Valores e Dados da empresa*/
 .img-right {
     margin-left: 200px;
     height: auto;
     width: 400px;
 }
-.mvv-container {
-    width: 94%;
-    max-width: 1200px;
-    margin: 45px auto 0;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.intro {
+    color:#059B9A;
 }
 
-.mvv-card {
-    border: 1px solid #ddd;
+.mvv-box {
+    height: 200px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid #666;
     border-radius: 15px;
-    padding: 20px;
 }
 
-.mvv-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #e1f6f5;
+.itens {
+    inset: 0;
+    width: 100%;                /*Ocupa toda a largura da caixa */
+}
 
+.data {
     display: flex;
-    align-items: center;
+    flex-direction: row;        /*Esquerda → direita */
+    flex-wrap: wrap;            /*Quebra linha em telas pequenas */
     justify-content: center;
-    margin-bottom: 14px;
-}
+    align-items: flex-start;
+    gap: 10px;
 
-.mvv-icon img {
-    width: 20px;
-    height: 20px;
-}
-
-.mvv-card h3 {
-    font-size: 15px;
-    color: #0c0636;
-    margin-bottom: 8px;
-}
-
-.mvv-card p {
-    font-size: 12px;
-    color: #777;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.mvv-valores ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.mvv-valores li {
-    position: relative;
-    padding-left: 22px;
-    margin-bottom: 8px;
-
-    font-size: 12px;
-    color: #777;
-    line-height: 1.5;
-}
-
-.mvv-valores li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #059b9a;
-    font-weight: 700;
-}
-
-
-/* Dados do site e da compania */
-.dados-list {
-    width: 94%;
-    max-width: 1200px;
-    margin: 45px auto 70px;
-
-    background: #e1f6f5;
-    border-radius: 14px;
-    padding: 28px;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.dados {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    gap: 14px;
-    margin-bottom: 0;
-}
-
-.dados-icon {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: white;
-    color: #059b9a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.dados-icon img {
-    width: 22px;
-    height: 22px;
-}
-
-.dados h3 {
-    font-size: 18px;
-    color: #0c0636;
-    margin-bottom: 4px;
-}
-
-.dados p {
-    color: #777;
-    font-size: 12px;
-    line-height: 1.5;
-    margin-top: 0;
-}
-
-
-/* Chamada para agências parceiras */
-.cta-parceria {
-    background: #0c0636;
-}
-
-.cta-container {
     width: 94%;
     max-width: 1200px;
     margin: auto;
-    padding: 28px 0;
+    padding-top: 5px;
+}
+
+.data > div {
+    flex: 1 1 200px;            /*Cada bloco divide o espaço igualmente efaz a organização */
+    text-align: center;
+}
+
+.mvv-icon {
+    width: 60px;                /*Ajuste ao tamanho do seu ícone */
+    height: 60px;
+}
+
+.data-box {
+    height: 200px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px 25px;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
 
-.cta-texto {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+    background-color: #F0F9F8;
+    border: none;
+    border-radius: 15px;
 }
-
-.cta-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: #059b9a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.cta-icon img {
-    width: 20px;
-    height: 20px;
-    filter: brightness(0) invert(1);
-}
-
-.cta-texto h3 {
-    font-size: 15px;
-    color: white;
-    margin-bottom: 4px;
-}
-
-.cta-texto p {
-    font-size: 12px;
-    color: #c7c2dd;
-    margin: 0;
-}
-
-.btn-cta {
-    background: #059b9a;
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 12px 22px;
-    border-radius: 8px;
-    white-space: nowrap;
-    transition: 0.2s;
-}
-
-.btn-cta:hover {
-    background: #048180;
-}
-
 
 /* Rodapé */
 footer {
