@@ -61,7 +61,7 @@
         <span>Destinos</span>
     </a>
 
-    <a href="#">
+    <a href="Agencia.html">
         <img src="assets/agencias.png" >
         <span>Agências</span>
     </a>
@@ -87,14 +87,216 @@
 </header>
 
 
-<div>
-    <h1 class="cabeçalho ">Central de Ajuda</h1>
-    <p>Fale com a gente pelo WhatsApp (botão verde no canto) ou por ola@turismosembarreiras.com.br.</p>
+<!-- Conteúdo -->
 
-    <button onclick="window.location.href='#'" class="but-touch">
-        <img src="assets/Balão.png">
-    </button>
-</div>
+    <main class="conteudo-ajuda">
+
+        <section
+            class="cabecalho-ajuda"
+            aria-labelledby="titulo-ajuda"
+        >
+
+            <h2 id="titulo-ajuda">
+                Central de Ajuda
+            </h2>
+
+            <p>
+                Precisa de ajuda? Estamos aqui para
+                facilitar sua experiência com o
+                Turismo sem Barreiras.
+            </p>
+
+        </section>
+
+
+        <!-- Formas de contato -->
+
+        <section
+            class="contatos"
+            aria-labelledby="titulo-contato"
+        >
+
+            <h3 id="titulo-contato">
+                Fale com a gente
+            </h3>
+
+            <div class="contatos-grid">
+
+                <!-- TELEFONE -->
+
+                <article class="contato-card">
+
+                    <div class="icone-contato">
+                        ☎
+                    </div>
+
+                    <h4>
+                        Telefone
+                    </h4>
+
+                    <p>
+                        Entre em contato com nossa
+                        central de atendimento.
+                    </p>
+
+                    <a
+                        href="tel:08001234567"
+                        class="botao-contato"
+                    >
+                        Ligar para 0800 123 4567
+                    </a>
+
+                </article>
+
+
+                <!-- E-MAIL -->
+
+                <article class="contato-card">
+
+                    <div class="icone-contato">
+                        ✉
+                    </div>
+
+                    <h4>
+                        E-mail
+                    </h4>
+
+                    <p>
+                        Envie sua dúvida para nossa
+                        equipe.
+                    </p>
+
+                    <a
+                        href="mailto:ola@turismosembarreiras.com.br"
+                        class="botao-contato"
+                    >
+                        Enviar e-mail
+                    </a>
+
+                </article>
+
+
+                <!-- ATENDIMENTO -->
+
+                <article class="contato-card">
+
+                    <div class="icone-contato">
+                        💬
+                    </div>
+
+                    <h4>
+                        Atendimento
+                    </h4>
+
+                    <p>
+                        Acesse as opções de atendimento
+                        disponíveis.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="botao-contato botao-atendimento"
+                    >
+                        Ver opções
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Dúvidas -->
+
+        <section
+            class="duvidas"
+            aria-labelledby="titulo-duvidas"
+        >
+
+            <h3 id="titulo-duvidas">
+                Dúvidas frequentes
+            </h3>
+
+
+            <div class="lista-duvidas">
+
+                <details>
+
+                    <summary>
+                        Como encontro um pacote acessível?
+                    </summary>
+
+                    <p>
+                        Acesse a página de Pacotes e utilize
+                        os filtros de região, tipo de deficiência,
+                        acessibilidade, preço e duração.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Como saber se um pacote possui acessibilidade?
+                    </summary>
+
+                    <p>
+                        Os pacotes apresentam informações sobre
+                        transporte adaptado, hospedagem acessível,
+                        passeios e outros recursos disponíveis.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Como entrar em contato com uma agência?
+                    </summary>
+
+                    <p>
+                        Você pode consultar as informações
+                        disponíveis no pacote escolhido e entrar
+                        em contato com a agência responsável.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Posso pedir ajuda para encontrar uma viagem?
+                    </summary>
+
+                    <p>
+                        Sim. Entre em contato conosco pelo telefone
+                        ou e-mail e explique o que você precisa.
+                    </p>
+
+                </details>
+
+            </div>
+
+        </section>
+
+
+        <!-- Botão balão-->
+
+        <button type="button"
+            class="but-touch"
+            aria-label="Abrir opções de atendimento"
+            title="Abrir opções de atendimento"
+        >
+
+            <img src="assets/Balão.png" alt="">
+
+        </button>
+
+    </main>
 
 <!-- Rodapé -->
 <footer>
@@ -142,6 +344,5 @@
     <section class="principal">
 
     </section>
-    <script src="Central_ajuda.js"></script>
 </body>
 </html>

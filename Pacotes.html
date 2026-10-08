@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Turismo sem Barreiras</title>
+    <title>Pacotes - Turismo sem Barreiras</title>
 
-    <link rel="stylesheet" href="style/Home.css">
+    <link rel="stylesheet" href="style/Pacotes.css">
 </head>
 
 <body>
@@ -53,438 +53,709 @@
 
 <!-- Menu -->
 <div class="menu-container">
+
     <nav id="menu">
 
-    <a href="Pacotes.html" class="active">
-        <img src="assets/pacotes.png" >
-        <span>Pacotes</span>
-    </a>
+        <a href="Pacotes.html" class="active">
+            <img src="assets/pacotes.png" alt="">
+            <span>Pacotes</span>
+        </a>
 
-    <a href="#">
-        <img src="assets/destinos.png" >
-        <span>Destinos</span>
-    </a>
+        <a href="#">
+            <img src="assets/destinos.png" alt="">
+            <span>Destinos</span>
+        </a>
 
-    <a href="#">
-        <img src="assets/agencias.png" >
-        <span>Agências</span>
-    </a>
+        <a href="Agencia.html">
+            <img src="assets/agencias.png" alt="">
+            <span>Agências</span>
+        </a>
 
-    <a href="Como_funciona.html">
-        <img src="assets/comofunciona.png" >
-        <span>Como funciona</span>
-    </a>
+        <a href="Como_funciona.html">
+            <img src="assets/comofunciona.png" alt="">
+            <span>Como funciona</span>
+        </a>
 
-    <a href="Sobre_nos.html">
-        <img src="assets/sobrenos.png" >
-        <span>Sobre nós</span>
-    </a>
+        <a href="Sobre_nos.html">
+            <img src="assets/sobrenos.png" alt="">
+            <span>Sobre nós</span>
+        </a>
 
-    <a href="Central_ajuda.html">
-        <img src="assets/centraldeajuda.png" >
-        <span>Central de ajuda</span>
-    </a>
+        <a href="Central_ajuda.html">
+            <img src="assets/centraldeajuda.png" alt="">
+            <span>Central de ajuda</span>
+        </a>
 
     </nav>
+
 </div>
 
-<!-- Selo -->
-    <section class="selo-section">
 
-        <div class="selo">
+<!-- ================= CONTEÚDO ================= -->
 
-            <div class="selo-icon">
-                ♢
+<main class="pacotes-container">
+
+    <div class="titulo-pagina">
+
+        <h2>Pacotes acessíveis</h2>
+
+        <p>8 pacotes encontrados com acessibilidade auditada</p>
+
+    </div>
+
+
+    <div class="conteudo-pacotes">
+
+
+        <!-- ================= FILTROS ================= -->
+
+        <aside class="filtros">
+
+            <h3>⚱ &nbsp; Filtros</h3>
+
+
+            <label>REGIÃO</label>
+
+            <select>
+                <option>Todas</option>
+                <option>Sul</option>
+                <option>Sudeste</option>
+                <option>Nordeste</option>
+                <option>Centro-Oeste</option>
+                <option>Norte</option>
+            </select>
+
+
+            <label>TIPO DE DEFICIÊNCIA ATENDIDA</label>
+
+            <select>
+                <option>Qualquer</option>
+                <option>Visual</option>
+                <option>Auditiva</option>
+                <option>Física</option>
+                <option>Intelectual</option>
+            </select>
+
+
+            <label>ACESSIBILIDADE</label>
+
+            <div class="check">
+                <input type="checkbox">
+                <span>Transporte adaptado</span>
             </div>
 
-            <div>
-                <h3>Selo Turismo sem Barreiras</h3>
-
-                <p>
-                    Toda agência e pacote passam por auditoria de acessibilidade.
-                    Escolha entre Bronze, Prata ou Ouro conforme o nível verificado.
-                </p>
+            <div class="check">
+                <input type="checkbox">
+                <span>Hospedagem acessível</span>
             </div>
 
-            <a href="#">
-                Saiba mais &gt;
-            </a>
-
-        </div>
-
-    </section>
+            <div class="check">
+                <input type="checkbox">
+                <span>Passeio acessível</span>
+            </div>
 
 
-    <!-- Destinos -->
-    <section class="destinos">
+            <label>PREÇO MÁXIMO (R$)</label>
 
-        <div class="section-title">
-
-            <h2>Destinos populares</h2>
-
-            <a href="#">Ver todos →</a>
-
-        </div>
-
-
-        <div class="destinos-grid">
-
-            <article class="card">
-
-                <div class="card-image">
-
-                    <img src="assets/rio.jpg" alt="Rio de Janeiro">
-
-                    <span class="selo-card">
-                        ◉ Selo Ouro
-                    </span>
-
-                </div>
-
-                <div class="card-content">
-
-                    <div class="cidade-avaliacao">
-
-                        <div>
-                            <h3>Rio de Janeiro</h3>
-                            <small>RJ · Brasil</small>
-                        </div>
-
-                        <span>★ 4.8</span>
-
-                    </div>
-
-                    <p>A partir de</p>
-
-                    <strong>R$ 1.290</strong>
-
-                    <button>Ver pacotes</button>
-
-                </div>
-
-            </article>
+            <select>
+                <option>Qualquer</option>
+                <option>R$ 1.500</option>
+                <option>R$ 2.000</option>
+                <option>R$ 3.000</option>
+                <option>R$ 5.000</option>
+            </select>
 
 
-            <article class="card">
+            <label>DURAÇÃO</label>
 
-                <div class="card-image">
+            <select>
+                <option>Qualquer</option>
+                <option>Até 3 dias</option>
+                <option>4 dias</option>
+                <option>5 dias</option>
+                <option>7 dias</option>
+            </select>
 
-                    <img src="assets/foz.jpg" alt="Foz do Iguaçu">
+        </aside>
 
-                    <span class="selo-card">
-                        ◉ Selo Ouro
-                    </span>
 
-                </div>
+        <!-- ================= PACOTES ================= -->
 
-                <div class="card-content">
+        <section class="resultado">
 
-                    <div class="cidade-avaliacao">
+            <div class="ordenacao">
 
-                        <div>
-                            <h3>Foz do Iguaçu</h3>
-                            <small>PR · Brasil</small>
-                        </div>
+                <span>Ordenar por</span>
 
-                        <span>★ 4.8</span>
+                <select>
+                    <option>Próxima saída</option>
+                    <option>Menor preço</option>
+                    <option>Maior preço</option>
+                    <option>Melhor avaliação</option>
+                </select>
+
+            </div>
+
+
+            <div class="pacotes-grid">
+
+
+                <!-- PACOTE 1 -->
+
+                <article class="pacote-card">
+
+                    <div class="imagem-pacote">
+
+                        <img src="assets/foz.jpg" alt="Foz do Iguaçu">
+
+                        <span class="selo ouro">● Selo Ouro</span>
+
+                        <span class="local">Foz de Iguaçu - PR</span>
 
                     </div>
 
-                    <p>A partir de</p>
+                    <div class="pacote-info">
 
-                    <strong>R$ 1.590</strong>
+                        <div class="titulo-avaliacao">
 
-                    <button>Ver pacotes</button>
+                            <h3>Foz de Iguaçu - Cataratas e Itaipu</h3>
 
-                </div>
+                            <span>★ 4.9</span>
 
-            </article>
-
-
-            <article class="card">
-
-                <div class="card-image">
-
-                    <img src="assets/gramado.jpg" alt="Gramado">
-
-                    <span class="selo-card">
-                        ◉ Selo Prata
-                    </span>
-
-                </div>
-
-                <div class="card-content">
-
-                    <div class="cidade-avaliacao">
-
-                        <div>
-                            <h3>Gramado</h3>
-                            <small>RS · Brasil</small>
                         </div>
 
-                        <span>★ 4.8</span>
+                        <p class="descricao">
+                            Cataratas com trilha suspensa e Itaipu com passeio especial PCD.
+                        </p>
+
+                        <small>Por Roda Livre Turismo</small>
+
+                        <div class="tags">
+                            <span>♿ Transporte adaptado</span>
+                            <span>▣ Hospedagem PCD</span>
+                            <span>♿ Passeio acessível</span>
+                            <span>♿ Guia especializado</span>
+                        </div>
+
+                        <p class="atendimento">
+                            ◉ Atende: Cadeirante, Mobilidade reduzida, ...
+                        </p>
+
+                        <div class="preco">
+
+                            <div>
+                                <small>3 DIAS PRÓX. SAÍDA</small>
+                                <strong>21 de ago.</strong>
+                            </div>
+
+                            <div>
+                                <small>A PARTIR DE</small>
+                                <strong>R$ 1.590</strong>
+                            </div>
+
+                        </div>
+
+                        <button>Ver detalhes</button>
 
                     </div>
 
-                    <p>A partir de</p>
-
-                    <strong>R$ 1.890</strong>
-
-                    <button>Ver pacotes</button>
-
-                </div>
-
-            </article>
+                </article>
 
 
-            <article class="card">
+                <!-- PACOTE 2 -->
 
-                <div class="card-image">
+                <article class="pacote-card">
 
-                    <img src="assets/salvador.jpg" alt="Salvador">
+                    <div class="imagem-pacote">
 
-                    <span class="selo-card">
-                        ◉ Selo Prata
-                    </span>
+                        <img src="assets/salvador.jpg" alt="Salvador">
 
-                </div>
+                        <span class="selo ouro">● Selo Ouro</span>
 
-                <div class="card-content">
-
-                    <div class="cidade-avaliacao">
-
-                        <div>
-                            <h3>Salvador</h3>
-                            <small>BA · Brasil</small>
-                        </div>
-
-                        <span>★ 4.8</span>
+                        <span class="local">Salvador - BA</span>
 
                     </div>
 
-                    <p>A partir de</p>
+                    <div class="pacote-info">
 
-                    <strong>R$ 1.490</strong>
+                        <div class="titulo-avaliacao">
 
-                    <button>Ver pacotes</button>
+                            <h3>Salvador Cultura Viva — 4 dias</h3>
 
-                </div>
+                            <span>★ 4.8</span>
 
-            </article>
-
-
-            <article class="card">
-
-                <div class="card-image">
-
-                    <img src="assets/bonito.jpg" alt="Bonito">
-
-                    <span class="selo-card">
-                        ◉ Selo Ouro
-                    </span>
-
-                </div>
-
-                <div class="card-content">
-
-                    <div class="cidade-avaliacao">
-
-                        <div>
-                            <h3>Bonito</h3>
-                            <small>MS · Brasil</small>
                         </div>
 
-                        <span>★ 4.8</span>
+                        <p class="descricao">
+                            Pelourinho, praias com cadeira anfíbia e gastronomia baiana.
+                        </p>
+
+                        <small>Por Bahia Para Todos</small>
+
+                        <div class="tags">
+                            <span>♿ Transporte adaptado</span>
+                            <span>▣ Hospedagem PCD</span>
+                            <span>♿ Passeio acessível</span>
+                            <span>♿ Guia especializado</span>
+                        </div>
+
+                        <p class="atendimento">
+                            ◉ Atende: Cadeirante, Mobilidade reduzida, ...
+                        </p>
+
+                        <div class="preco">
+
+                            <div>
+                                <small>4 DIAS PRÓX. SAÍDA</small>
+                                <strong>21 de ago.</strong>
+                            </div>
+
+                            <div>
+                                <small>A PARTIR DE</small>
+                                <strong>R$ 1.690</strong>
+                            </div>
+
+                        </div>
+
+                        <button>Ver detalhes</button>
 
                     </div>
 
-                    <p>A partir de</p>
-
-                    <strong>R$ 2.190</strong>
-
-                    <button>Ver pacotes</button>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
+                </article>
 
 
-    <!-- Três passos -->
-    <section class="passos">
+                <!-- PACOTE 3 -->
 
-        <div class="passos-title">
+                <article class="pacote-card">
 
-            <h2>Sua viagem em 3 passos</h2>
+                    <div class="imagem-pacote">
+
+                        <img src="assets/foz.jpg" alt="Foz do Iguaçu">
+
+                        <span class="selo prata">● Selo Prata</span>
+
+                        <span class="local">Foz de Iguaçu - PR</span>
+
+                    </div>
+
+                    <div class="pacote-info">
+
+                        <div class="titulo-avaliacao">
+
+                            <h3>Foz + Macuco Safari sensorial</h3>
+
+                            <span>★ 4.7</span>
+
+                        </div>
+
+                        <p class="descricao">
+                            Roteiro leve para pessoas com deficiência.
+                        </p>
+
+                        <small>Por Caminhos Sem Limites</small>
+
+                        <div class="tags">
+                            <span>♿ Transporte adaptado</span>
+                            <span>▣ Hospedagem PCD</span>
+                            <span>♿ Passeio acessível</span>
+                            <span>♿ Guia especializado</span>
+                        </div>
+
+                        <p class="atendimento">
+                            ◉ Atende: Cadeirante, Mobilidade reduzida, ...
+                        </p>
+
+                        <div class="preco">
+
+                            <div>
+                                <small>3 DIAS PRÓX. SAÍDA</small>
+                                <strong>21 de ago.</strong>
+                            </div>
+
+                            <div>
+                                <small>A PARTIR DE</small>
+                                <strong>R$ 1.790</strong>
+                            </div>
+
+                        </div>
+
+                        <button>Ver detalhes</button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PACOTE 4 -->
+
+                <article class="pacote-card">
+
+                    <div class="imagem-pacote">
+
+                        <img src="assets/rio.jpg" alt="Rio de Janeiro">
+
+                        <span class="selo ouro">● Selo Ouro</span>
+
+                        <span class="local">Rio de Janeiro - RJ</span>
+
+                    </div>
+
+                    <div class="pacote-info">
+
+                        <div class="titulo-avaliacao">
+
+                            <h3>Rio de Janeiro Clássico — 4 dias acessíveis</h3>
+
+                            <span>★ 4.8</span>
+
+                        </div>
+
+                        <p class="descricao">
+                            Corcovado, Pão de Açúcar e Copacabana com van adaptada e guia especializado.
+                        </p>
+
+                        <small>Por Roda Livre Turismo</small>
+
+                        <div class="tags">
+                            <span>♿ Transporte adaptado</span>
+                            <span>▣ Hospedagem PCD</span>
+                            <span>♿ Passeio acessível</span>
+                            <span>♿ Guia especializado</span>
+                        </div>
+
+                        <p class="atendimento">
+                            ◉ Atende: Cadeirante, Mobilidade reduzida, ...
+                        </p>
+
+                        <div class="preco">
+
+                            <div>
+                                <small>4 DIAS PRÓX. SAÍDA</small>
+                                <strong>21 de ago.</strong>
+                            </div>
+
+                            <div>
+                                <small>A PARTIR DE</small>
+                                <strong>R$ 1.890</strong>
+                            </div>
+
+                        </div>
+
+                        <button>Ver detalhes</button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PACOTE 5 -->
+
+                <article class="pacote-card">
+
+                    <div class="imagem-pacote">
+
+                        <img src="assets/gramado.jpg" alt="Gramado">
+
+                        <span class="selo prata">● Selo Prata</span>
+
+                        <span class="local">Gramado - RS</span>
+
+                    </div>
+
+                    <div class="pacote-info">
+
+                        <div class="titulo-avaliacao">
+
+                            <h3>Gramado Cultura Viva — 4 dias</h3>
+
+                            <span>★ 4.8</span>
+
+                        </div>
+
+                        <p class="descricao">
+                            Ônibus adaptado para os principais pontos, chocolate e vinho para todos.
+                        </p>
+
+                        <small>Por Caminhos Sem Limites</small>
+
+                        <div class="tags">
+                            <span>♿ Transporte adaptado</span>
+                            <span>▣ Hospedagem PCD</span>
+                            <span>♿ Passeio acessível</span>
+                            <span>♿ Guia especializado</span>
+                        </div>
+
+                        <p class="atendimento">
+                            ◉ Atende: Cadeirante, Mobilidade reduzida, ...
+                        </p>
+
+                        <div class="preco">
+
+                            <div>
+                                <small>5 DIAS PRÓX. SAÍDA</small>
+                                <strong>21 de ago.</strong>
+                            </div>
+
+                            <div>
+                                <small>A PARTIR DE</small>
+                                <strong>R$ 2.290</strong>
+                            </div>
+
+                        </div>
+
+                        <button>Ver detalhes</button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PACOTE 6 -->
+
+                <article class="pacote-card">
+
+                    <div class="imagem-pacote">
+
+                        <img src="assets/lencois.jpg" alt="Lençóis Maranhenses">
+
+                        <span class="selo ouro">● Selo Ouro</span>
+
+                        <span class="local">Lençóis Maranhenses - MA</span>
+
+                    </div>
+
+                    <div class="pacote-info">
+
+                        <div class="titulo-avaliacao">
+
+                            <h3>Lençóis Maranhenses — 4 dias</h3>
+
+                            <span>★ 4.8</span>
+
+                        </div>
+
+                        <p class="descricao">
+                            Paisagens incríveis dos Lençóis Maranhenses com transporte adaptado.
+                        </p>
+
+                        <small>Por Caminhos Sem Limites</small>
+
+                        <div class="tags">
+                            <span>♿ Transporte adaptado</span>
+                            <span>▣ Hospedagem PCD</span>
+                            <span>♿ Passeio acessível</span>
+                            <span>♿ Guia especializado</span>
+                        </div>
+
+                        <p class="atendimento">
+                            ◉ Atende: Cadeirante, Mobilidade reduzida, ...
+                        </p>
+
+                        <div class="preco">
+
+                            <div>
+                                <small>4 DIAS PRÓX. SAÍDA</small>
+                                <strong>21 de ago.</strong>
+                            </div>
+
+                            <div>
+                                <small>A PARTIR DE</small>
+                                <strong>R$ 3.290</strong>
+                            </div>
+
+                        </div>
+
+                        <button>Ver detalhes</button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PACOTE 7 -->
+
+                <article class="pacote-card">
+
+                    <div class="imagem-pacote">
+
+                        <img src="assets/bonito.jpg" alt="Bonito">
+
+                        <span class="selo ouro">● Selo Ouro</span>
+
+                        <span class="local">Bonito - MS</span>
+
+                    </div>
+
+                    <div class="pacote-info">
+
+                        <div class="titulo-avaliacao">
+
+                            <h3>Bonito — Ecoturismo para todos</h3>
+
+                            <span>★ 4.8</span>
+
+                    </div>
+
+                    <p class="descricao">Flutuação adaptada, Gruta do Lago Azul com rampa e trilha suspensa.</p>
+
+                    <small>Por Roda Livre Turismo</small>
+
+                    <div class="tags">
+                        <span>♿ Transporte adaptado</span>
+                        <span>▣ Hospedagem PCD</span>
+                        <span>♿ Passeio acessível</span>
+                        <span>♿ Guia especializado</span>
+                    </div>
+
+                    <p class="atendimento">
+                        ◉ Atende: Cadeirante, Mobilidade reduzida, ...
+                    </p>
+
+                    <div class="preco">
+
+                        <div>
+                            <small>5 DIAS PRÓX. SAÍDA</small>
+                            <strong>21 de ago.</strong>
+                        </div>
+
+                        <div>
+                            <small>A PARTIR DE</small>
+                            <strong>R$ 3.290</strong>
+                        </div>                    
+                        <button>Ver detalhes</button>
+
+                </article>
+
+
+                <!-- PACOTE 8 -->
+
+                <article class="pacote-card">
+
+                    <div class="imagem-pacote">
+
+                        <img src="assets/fernando.jpg" alt="Fernando de Noronha">
+
+                        <span class="selo ouro">● Selo Ouro</span>
+
+                        <span class="local">Fernando de Noronha - PE</span>
+
+                    </div>
+
+                    <div class="pacote-info">
+
+                        <div class="titulo-avaliacao">
+
+                            <h3>Fernando de Noronha — Paraíso acessível</h3>
+
+                            <span>★ 4.9</span>
+
+                        </div>
+
+                        <p class="descricao">
+                            Passeios de barco adaptados e mirantes com acesso para cadeirantes.
+                        </p>
+
+                        <small>Por Bahia Para Todos</small>
+
+                        <div class="tags">
+                            <span>♿ Transporte adaptado</span>
+                            <span>▣ Hospedagem PCD</span>
+                            <span>♿ Passeio acessível</span>
+                            <span>♿ Guia especializado</span>
+                        </div>
+
+                        <p class="atendimento">
+                            ◉ Atende: Cadeirante, Mobilidade reduzida, ...
+                        </p>
+
+                        <div class="preco">
+
+                            <div>
+                                <small>5 DIAS PRÓX. SAÍDA</small>
+                                <strong>21 de ago.</strong>
+                            </div>
+
+                            <div>
+                                <small>A PARTIR DE</small>
+                                <strong>R$ 4.890</strong>
+                            </div>
+
+                        </div>
+
+                        <button>Ver detalhes</button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- Rodapé -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+
+            <h3>
+                <img src="assets/logo.png" alt="">
+                Turismo sem Barreiras
+            </h3>
 
             <p>
-                A gente cuida de tudo — passagem, hospedagem,
-                transporte adaptado e equipe de apoio.
+                Conectamos viajantes com deficiência a
+                pequenas agências especializadas em
+                turismo acessível pelo Brasil.
             </p>
 
         </div>
 
 
-        <div class="passos-grid">
+        <div>
 
-            <div class="passo">
+            <h4>EXPLORAR</h4>
 
-                <div class="passo-icon">⌕</div>
-
-                <h3>1. Escolha o destino</h3>
-
-                <p>
-                    Filtre por tipo de deficiência, transporte
-                    adaptado e hospedagem acessível.
-                </p>
-
-            </div>
-
-
-            <div class="passo">
-
-                <div class="passo-icon">✓</div>
-
-                <h3>2. Reserve com segurança</h3>
-
-                <p>
-                    A agência confirma vagas, guia especializado
-                    e detalhes da viagem.
-                </p>
-
-            </div>
-
-
-            <div class="passo">
-
-                <div class="passo-icon">▦</div>
-
-                <h3>3. Aproveite sem preocupação</h3>
-
-                <p>
-                    Do embarque ao passeio, equipe treinada
-                    acompanha todo o roteiro.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Acessibilidade e agência -->
-    <section class="agencia-section">
-
-        <div class="acessibilidade">
-
-            <h2>
-                Acessibilidade auditada em cada detalhe
-            </h2>
-
-            <p>
-                Nossas agências parceiras entregam checklists
-                completos para você viajar com confiança.
-            </p>
-
-            <div class="recursos">
-
-                <span>✓ Transporte adaptado</span>
-                <span>✓ Hospedagem acessível</span>
-                <span>✓ Passeios acessíveis</span>
-                <span>✓ Guia especializado</span>
-
-            </div>
+            <a href="#">Pacotes</a>
+            <a href="#">Destinos</a>
+            <a href="#">Agências parceiras</a>
+            <a href="#">Como funciona</a>
 
         </div>
 
 
-        <div class="agencia-card">
+        <div>
 
-            <h2>É agência de viagem?</h2>
+            <h4>INSTITUCIONAL</h4>
 
-            <p>
-                Digitalize sua operação, alcance viajantes PCD
-                do Brasil todo e conquiste o Selo Turismo sem Barreiras.
-            </p>
-
-            <button>
-                Cadastrar minha agência
-                &nbsp; &gt;
-            </button>
+            <a href="#">Sobre nós</a>
+            <a href="#">Central de ajuda</a>
+            <a href="#">Selo de Acessibilidade</a>
+            <a href="#">Termos & Privacidade</a>
 
         </div>
 
-    </section>
 
+        <div>
 
-    <!-- Botão de chat -->
-    <button class="chat">
-        <img src="assets/batepapo.png" >
-    </button>
+            <h4>FALE CONOSCO</h4>
 
-
-    <!-- Rodapé -->
-    <footer>
-
-        <div class="footer-content">
-
-            <div class="footer-logo">
-                
-                <h3><img src="assets/logo.png" > Turismo sem Barreiras</h3>
-
-                <p>
-                    Conectamos viajantes com deficiência a
-                    pequenas agências especializadas em
-                    turismo acessível pelo Brasil.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h4>EXPLORAR</h4>
-
-                <a href="#">Pacotes</a>
-                <a href="#">Destinos</a>
-                <a href="#">Agências parceiras</a>
-                <a href="#">Como funciona</a>
-
-            </div>
-
-
-            <div>
-
-                <h4>INSTITUCIONAL</h4>
-
-                <a href="#">Sobre nós</a>
-                <a href="#">Central de ajuda</a>
-                <a href="#">Selo de Acessibilidade</a>
-                <a href="#">Termos & Privacidade</a>
-
-            </div>
-
-
-            <div>
-
-                <h4>FALE CONOSCO</h4>
-
-                <p>☎ 0800 123 4567</p>
-                <p>✉ ola@turismosembarreiras.com.br</p>
-
-            </div>
+            <p>☎ 0800 123 4567</p>
+            <p>✉ ola@turismosembarreiras.com.br</p>
 
         </div>
 
-    </footer>
+    </div>
 
+</footer>
 
-    <script src="index.js"></script>
-
+<script src="javaScript/Pacotes.js"></script>
 </body>
-
 </html>
