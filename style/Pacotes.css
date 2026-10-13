@@ -100,8 +100,8 @@ input:focus-visible {
 }
 
 .logo-area > img {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
@@ -555,99 +555,59 @@ input:focus-visible {
 /* ================= RODAPÉ ACESSÍVEL ================= */
 
 footer {
-    background: #100633;
+    background: #0c0636;
     color: white;
-
-    min-height: 330px;
-
-    padding: 45px 0;
+    padding: 40px 0;
 }
 
 .footer-content {
-    max-width: 1100px;
+    width: 94%;
+    max-width: 1200px;
     margin: auto;
-    padding: 0 15px;
-
     display: grid;
-    grid-template-columns: 2fr 1fr 1.2fr 1.3fr;
-
-    gap: 50px;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
 }
 
-
-/* Logo e descrição */
-
-.footer-logo h3 {
+.footer-content h3 {
+    font-size: 16px;
     display: flex;
     align-items: center;
-
-    gap: 12px;
-
-    font-size: 19px;
-    line-height: 1.4;
+    gap: 8px;
 }
 
-.footer-logo h3 img {
-    width: 50px;
-    height: 50px;
+.footer-content h3 img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-content h4 {
+    color: #9fd86b;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.footer-content p {
+    color: white;
+    font-size: 10px;
+    line-height: 1.5;
 }
 
 .footer-logo p {
-    max-width: 300px;
-
-    font-size: 14px;
-    line-height: 1.7;
-
-    margin-top: 15px;
-
-    color: #fff;
+    max-width: 200px;
+    margin-top: 10px;
 }
 
-
-/* Títulos */
-
-footer h4 {
-    color: #b4ed68;
-
-    font-size: 16px;
-    line-height: 1.4;
-
-    margin: 10px 0 17px;
+.footer-logo img {
+    width: 40px;
+    height: 40px;
 }
 
-
-/* Links */
-
-footer a {
+.footer-content a {
     display: block;
-
     color: white;
-
-    text-decoration: none;
-
-    font-size: 14px;
-    line-height: 1.6;
-
-    margin-bottom: 12px;
-
-    transition: 0.2s;
-}
-
-footer a:hover {
-    color: #b4ed68;
-    text-decoration: underline;
-}
-
-
-/* Contato */
-
-footer p {
-    color: white;
-
-    font-size: 14px;
-    line-height: 1.7;
-
-    margin-bottom: 10px;
+    font-size: 10px;
+    margin-bottom: 7px;
 }
 
 

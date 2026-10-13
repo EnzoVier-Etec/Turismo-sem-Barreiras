@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="assets/x-icon" href="assets/favicon-logo.png">
+    <title>Turismo sem Barreiras</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/Destinos.css">
+</head>
+
+<body>
+
+    <!-- Ícones (sprite SVG): usados com <svg class="ic"><use href="#i-nome"/></svg> -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+            <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+            <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+            <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+            <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+            <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+            <symbol id="i-x-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></symbol>
+            <symbol id="i-access" viewBox="0 0 24 24"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.36 3.5"/><path d="M4.24 14.5a5 5 0 0 0 6.88 6"/><path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></symbol>
+            <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+            <symbol id="i-ear" viewBox="0 0 24 24"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/></symbol>
+            <symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 5v13"/></symbol>
+            <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3Z"/><circle cx="12" cy="13" r="3"/></symbol>
+            <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+            <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+            <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+            <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+            <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+            <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+            <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+            <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+            <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+            <symbol id="i-hand" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0M14 10V4a2 2 0 0 0-4 0v2M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></symbol>
+            <symbol id="i-doc" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M8 13h8M8 17h8M8 9h2"/></symbol>
+            <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+            <symbol id="i-bag" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+            <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol>
+            <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="M12 8v6M6 10l6-2 6 2M9 22l3-8 3 8"/></symbol>
+        </defs>
+    </svg>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo-area" aria-label="Turismo sem Barreiras - página inicial">
+                <img src="assets/logo.png" alt="">
+                <div class="logo-text">
+                    <h1>Turismo <span>sem Barreiras</span></h1>
+                    <p>Viagens acessíveis pelo Brasil</p>
+                </div>
+            </a>
+
+            <nav id="menu" aria-label="Menu principal">
+                <a href="Destinos.html" class="active">Destinos</a>
+                <a href="Sobre_nos.html">Sobre nós</a>
+                <a href="#acessibilidade">Acessibilidade</a>
+                <a href="Central_ajuda.html">Contato</a>
+            </nav>
+
+            <div class="header-acoes">
+                <button type="button" class="btn-icone" aria-label="Buscar">
+                    <svg class="ic"><use href="#i-search"/></svg>
+                </button>
+                <a href="login.html" class="btn-icone" aria-label="Entrar ou cadastrar">
+                    <svg class="ic"><use href="#i-user"/></svg>
+                </a>
+                <a href="#" class="btn-favoritos">
+                    <svg class="ic"><use href="#i-heart"/></svg>
+                    Meus favoritos
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="pagina">
+
+        <!-- Topo do destino: galeria + reserva -->
+        <section class="destino-topo">
+
+            <div class="destino-info">
+
+                <p class="localizacao">
+                    <svg class="ic"><use href="#i-pin"/></svg>
+                    Oceano Atlântico• Fernando de Noronha - PE
+                </p>
+
+                <h2>Fernando de Noronha</h2>
+
+                <p class="duracao">
+                    <svg class="ic"><use href="#i-calendar"/></svg>
+                    4 dias / 3 noites
+                </p>
+
+                <p class="descricao">Passeios de barco adaptados e mirantes com acesso para cadeirantes.</p>
+
+                <div class="galeria">
+
+                    <div class="galeria-principal">
+                        <img id="foto-principal" src="assets/aramar-principal.jpg" alt="Passarela acessível levando à praia de Aramar">
+
+                        <button type="button" class="seta seta-esq" id="foto-anterior" aria-label="Foto anterior">
+                            <svg class="ic"><use href="#i-left"/></svg>
+                        </button>
+                        <button type="button" class="seta seta-dir" id="foto-proxima" aria-label="Próxima foto">
+                            <svg class="ic"><use href="#i-right"/></svg>
+                        </button>
+
+                        <span class="selo-acessivel">
+                            <svg class="ic"><use href="#i-check-circle"/></svg>
+                            Destino acessível
+                        </span>
+                    </div>
+
+                    <div class="galeria-mini">
+                        <button type="button" class="mini"><img src="assets/aramar-1.jpg" alt="Vista aérea da praia"></button>
+                        <button type="button" class="mini"><img src="assets/aramar-2.jpg" alt="Quiosque na praia"></button>
+                        <button type="button" class="mini"><img src="assets/aramar-3.jpg" alt="Coqueiros na orla"></button>
+                        <button type="button" class="mini"><img src="assets/aramar-4.jpg" alt="Pôr do sol em Aramar"></button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Caixa de reserva -->
+            <aside class="reserva" aria-label="Reserva">
+
+                <p class="reserva-de">A partir de</p>
+                <p class="reserva-preco">R$ 1.890,00</p>
+                <p class="reserva-por">por pessoa</p>
+
+                <p class="parcelas">
+                    <svg class="ic"><use href="#i-card"/></svg>
+                    Em até 12x no cartão
+                </p>
+
+                <fieldset class="datas">
+                    <legend>Escolha a sua data</legend>
+
+                    <label class="data-opcao">
+                        <input type="radio" name="data" checked>
+                        <span class="data-icone"><svg class="ic"><use href="#i-calendar"/></svg></span>
+                        <span class="data-texto">
+                            <strong>12 a 15 de set</strong>
+                            <small>(Disponível)</small>
+                        </span>
+                    </label>
+
+                    <label class="data-opcao">
+                        <input type="radio" name="data">
+                        <span class="data-icone"><svg class="ic"><use href="#i-calendar"/></svg></span>
+                        <span class="data-texto">
+                            <strong>03 a 06 de out</strong>
+                            <small>(Disponível)</small>
+                        </span>
+                    </label>
+
+                    <label class="data-opcao">
+                        <input type="radio" name="data">
+                        <span class="data-icone"><svg class="ic"><use href="#i-calendar"/></svg></span>
+                        <span class="data-texto">
+                            <strong>17 a 20 de nov</strong>
+                            <small>(Disponível)</small>
+                        </span>
+                    </label>
+                </fieldset>
+
+                <button type="button" class="btn-reservar">
+                    Reservar viagem
+                    <svg class="ic"><use href="#i-arrow"/></svg>
+                </button>
+
+            </aside>
+
+        </section>
+
+
+        <!-- Nível de acessibilidade -->
+        <section class="nivel" id="acessibilidade" aria-labelledby="titulo-nivel">
+
+            <div class="nivel-intro">
+                <span class="nivel-icone"><svg class="ic"><use href="#i-person"/></svg></span>
+                <div>
+                    <h3 id="titulo-nivel">Nível de acessibilidade</h3>
+                    <p>O destino conta com estrutura e serviços adaptados para garantir uma experiência segura e confortável.</p>
+                </div>
+            </div>
+
+            <div class="nivel-item">
+                <svg class="ic ic-grande"><use href="#i-access"/></svg>
+                <span>Cadeira de rodas</span>
+                <strong>5/5</strong>
+                <span class="estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</span>
+            </div>
+
+            <div class="nivel-item">
+                <svg class="ic ic-grande"><use href="#i-eye"/></svg>
+                <span>Visual</span>
+                <strong>5/5</strong>
+                <span class="estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</span>
+            </div>
+
+            <div class="nivel-item">
+                <svg class="ic ic-grande"><use href="#i-ear"/></svg>
+                <span>Auditiva</span>
+                <strong>5/5</strong>
+                <span class="estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</span>
+            </div>
+
+            <div class="nivel-item">
+                <svg class="ic ic-grande"><use href="#i-brain"/></svg>
+                <span>Cognitiva</span>
+                <strong>5/5</strong>
+                <span class="estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</span>
+            </div>
+
+        </section>
+
+
+        <!-- Fotos do passeio -->
+        <section class="fotos" aria-labelledby="titulo-fotos">
+
+            <div class="fotos-topo">
+                <h3 class="titulo-secao" id="titulo-fotos">
+                    <svg class="ic"><use href="#i-camera"/></svg>
+                    Fotos do passeio
+                </h3>
+                <a href="#" class="ver-todas">
+                    Ver todas (24)
+                    <svg class="ic"><use href="#i-right"/></svg>
+                </a>
+            </div>
+
+            <div class="filtros" role="group" aria-label="Filtrar fotos">
+                <button type="button" class="filtro ativo" data-filtro="todos">Tudo</button>
+                <button type="button" class="filtro" data-filtro="passeios">Passeios</button>
+                <button type="button" class="filtro" data-filtro="hospedagem">Hospedagem</button>
+                <button type="button" class="filtro" data-filtro="transporte">Transporte</button>
+                <button type="button" class="filtro" data-filtro="comida">Comida</button>
+            </div>
+
+            <div class="fotos-grid">
+
+                <figure class="foto-card" data-categoria="passeios">
+                    <img src="assets/foto-praia.jpg" alt="Praia com passarela de acesso adaptado">
+                    <figcaption>
+                        <span class="foto-icones">
+                            <svg class="ic"><use href="#i-access"/></svg>
+                            <svg class="ic"><use href="#i-eye"/></svg>
+                            <svg class="ic"><use href="#i-ear"/></svg>
+                        </span>
+                        Praia com acesso adaptado
+                    </figcaption>
+                </figure>
+
+                <figure class="foto-card" data-categoria="hospedagem">
+                    <img src="assets/foto-hospedagem.jpg" alt="Quarto de hotel adaptado">
+                    <figcaption>
+                        <span class="foto-icones">
+                            <svg class="ic"><use href="#i-access"/></svg>
+                            <svg class="ic"><use href="#i-eye"/></svg>
+                            <svg class="ic"><use href="#i-brain"/></svg>
+                        </span>
+                        Hospedagem adaptada
+                    </figcaption>
+                </figure>
+
+                <figure class="foto-card" data-categoria="transporte">
+                    <img src="assets/foto-transporte.jpg" alt="Ônibus com rampa de acesso para cadeirantes">
+                    <figcaption>
+                        <span class="foto-icones">
+                            <svg class="ic"><use href="#i-access"/></svg>
+                            <svg class="ic"><use href="#i-eye"/></svg>
+                            <svg class="ic"><use href="#i-ear"/></svg>
+                        </span>
+                        Transporte terrestre adaptado
+                    </figcaption>
+                </figure>
+
+                <figure class="foto-card" data-categoria="comida">
+                    <img src="assets/foto-comida.jpg" alt="Prato típico da culinária regional">
+                    <figcaption>
+                        <span class="foto-icones">
+                            <svg class="ic"><use href="#i-access"/></svg>
+                            <svg class="ic"><use href="#i-eye"/></svg>
+                            <svg class="ic"><use href="#i-brain"/></svg>
+                        </span>
+                        Gastronomia regional
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+
+        <!-- Guia completo -->
+        <section class="guia" aria-labelledby="titulo-guia">
+
+            <span class="guia-icone"><svg class="ic"><use href="#i-doc"/></svg></span>
+
+            <div class="guia-texto">
+                <h3 id="titulo-guia">Guia completo do destino</h3>
+                <p>Acesse o roteiro detalhado, informações sobre o clima, o que levar e contatos de emergência para viajar com mais segurança.</p>
+            </div>
+
+            <div class="guia-deco" aria-hidden="true">
+                <svg class="ic"><use href="#i-pin"/></svg>
+                <svg class="ic"><use href="#i-sun"/></svg>
+                <svg class="ic"><use href="#i-bag"/></svg>
+                <svg class="ic"><use href="#i-phone"/></svg>
+            </div>
+
+        </section>
+
+        <div class="guia-acoes">
+
+            <a href="#" class="acao">
+                <span class="acao-icone azul"><svg class="ic"><use href="#i-download"/></svg></span>
+                Baixar PDF
+            </a>
+
+            <a href="#" class="acao">
+                <span class="acao-icone verde"><svg class="ic"><use href="#i-headphones"/></svg></span>
+                Ouvir em áudio
+            </a>
+
+            <a href="#" class="acao">
+                <span class="acao-icone azul"><svg class="ic"><use href="#i-hand"/></svg></span>
+                Vídeo em Libras
+            </a>
+
+            <a href="#" class="acao">
+                <span class="acao-icone verde"><svg class="ic"><use href="#i-doc"/></svg></span>
+                Leitura fácil
+            </a>
+
+        </div>
+
+
+        <!-- Roteiro dia a dia -->
+        <section class="roteiro" aria-labelledby="titulo-roteiro">
+
+            <h3 class="titulo-secao" id="titulo-roteiro">
+                <svg class="ic"><use href="#i-calendar"/></svg>
+                Roteiro dia a dia
+            </h3>
+
+            <details class="dia" open>
+                <summary>
+                    <svg class="ic"><use href="#i-calendar"/></svg>
+                    Dia 1 - Chegada
+                    <svg class="ic seta-dia"><use href="#i-down"/></svg>
+                </summary>
+                <div class="dia-conteudo">
+                    <img src="assets/roteiro-dia1.jpg" alt="Orla de Aramar">
+                    <p>Transfer do aeroporto até o hotel. Check-in e recepção da equipe. Tarde livre para descansar e conhecer a região.</p>
+                </div>
+            </details>
+
+            <details class="dia">
+                <summary>
+                    <svg class="ic"><use href="#i-calendar"/></svg>
+                    Dia 2 - Praia do Sol
+                    <svg class="ic seta-dia"><use href="#i-down"/></svg>
+                </summary>
+                <div class="dia-conteudo">
+                    <p>Manhã na Praia do Sol, com passarela e cadeiras anfíbias disponíveis. Almoço em restaurante acessível.</p>
+                </div>
+            </details>
+
+            <details class="dia">
+                <summary>
+                    <svg class="ic"><use href="#i-calendar"/></svg>
+                    Dia 3 - Centro Histórico
+                    <svg class="ic seta-dia"><use href="#i-down"/></svg>
+                </summary>
+                <div class="dia-conteudo">
+                    <p>Passeio guiado pelo Centro Histórico, com rotas de piso regular e paradas para descanso.</p>
+                </div>
+            </details>
+
+            <details class="dia">
+                <summary>
+                    <svg class="ic"><use href="#i-calendar"/></svg>
+                    Dia 4 - Retorno
+                    <svg class="ic seta-dia"><use href="#i-down"/></svg>
+                </summary>
+                <div class="dia-conteudo">
+                    <p>Café da manhã, check-out e transfer até o aeroporto com acompanhamento da equipe.</p>
+                </div>
+            </details>
+
+        </section>
+
+
+        <!-- Incluso / Não incluso -->
+        <section class="inclusos">
+
+            <div class="incluso">
+                <h3>
+                    <svg class="ic"><use href="#i-check-circle"/></svg>
+                    Incluso no pacote
+                </h3>
+                <ul>
+                    <li><svg class="ic"><use href="#i-check"/></svg> Hospedagem adaptada</li>
+                    <li><svg class="ic"><use href="#i-check"/></svg> Transporte terrestre adaptado</li>
+                    <li><svg class="ic"><use href="#i-check"/></svg> Guia especializado</li>
+                    <li><svg class="ic"><use href="#i-check"/></svg> Alimentação (café da manhã, almoço e jantar)</li>
+                </ul>
+            </div>
+
+            <div class="nao-incluso">
+                <h3>
+                    <svg class="ic"><use href="#i-x-circle"/></svg>
+                    Não incluso
+                </h3>
+                <ul>
+                    <li><svg class="ic"><use href="#i-x"/></svg> Passagem até a cidade de saída</li>
+                    <li><svg class="ic"><use href="#i-x"/></svg> Gastos pessoais</li>
+                    <li><svg class="ic"><use href="#i-x"/></svg> Passeios extras</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <div class="reserva-final">
+            <button type="button" class="btn-reservar btn-reservar-final">
+                <svg class="ic"><use href="#i-calendar"/></svg>
+                Reservar viagem
+                <svg class="ic"><use href="#i-arrow"/></svg>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p class="slogan">Mais que viagens,<br>conexões sem barreiras.</p>
+        <svg class="onda" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+            <path class="onda-azul" d="M0 60 C240 10 480 110 760 60 S1200 20 1440 70 L1440 120 L0 120 Z"/>
+            <path class="onda-verde" d="M0 95 C300 55 600 125 900 90 S1300 60 1440 85 L1440 120 L0 120 Z"/>
+        </svg>
+    </footer>
+
+    <script src="javaScript/Destinos.js"></script>
+
+</body>
+
+</html>

@@ -6,12 +6,10 @@
     --azul-escuro: #0d3b66;
     --azul: #1a7fd4;
     --azul-claro: #eaf4fb;
-    --verde: #1e9e57;
     --verde-claro: #e9f7ef;
     --vermelho: #d93a3a;
     --vermelho-claro: #fdeeee;
-    --texto: #1c2b3a;
-    --texto-suave: #5b6b7a;
+    --texto-suave: #666;
     --borda: #d7e6f2;
     --largura: 1200px;
 }
@@ -24,7 +22,7 @@
 
 body {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
-    color: var(--texto);
+    color: #1c2b3a;
     background: white;
     line-height: 1.5;
 }
@@ -98,8 +96,8 @@ input:focus-visible + .data-icone {
 }
 
 .logo-area img {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
@@ -110,7 +108,7 @@ input:focus-visible + .data-icone {
 }
 
 .logo-text h1 span {
-    color: var(--verde);
+    color: #009fa3;
 }
 
 .logo-text p {
@@ -133,7 +131,7 @@ input:focus-visible + .data-icone {
 
 #menu a:hover,
 #menu a.active {
-    border-bottom-color: var(--verde);
+    border-bottom-color: #009fa3;
 }
 
 .header-acoes {
@@ -167,13 +165,13 @@ input:focus-visible + .data-icone {
 
     padding: 9px 20px;
 
-    border: 1px solid var(--verde);
+    border: 1px solid #1e9e57;
     border-radius: 30px;
     background: var(--verde-claro);
 
     font-size: 12px;
     font-weight: 600;
-    color: var(--verde);
+    color: #1e9e57;
 }
 
 .btn-favoritos:hover {
@@ -228,7 +226,7 @@ input:focus-visible + .data-icone {
 }
 
 .localizacao .ic {
-    color: var(--verde);
+    color: #1e9e57;
 }
 
 .destino-info h2 {
@@ -319,7 +317,7 @@ input:focus-visible + .data-icone {
 
     font-size: 11px;
     font-weight: 600;
-    color: var(--verde);
+    color:#1e9e57;
 }
 
 .galeria-mini {
@@ -347,7 +345,7 @@ input:focus-visible + .data-icone {
 
 .mini.ativa,
 .mini:hover {
-    border-color: var(--verde);
+    border-color: #1e9e57;
 }
 
 /* Caixa de reserva */
@@ -465,18 +463,18 @@ input:focus-visible + .data-icone {
 }
 
 .data-opcao:has(input:checked) {
-    border: 2px solid var(--verde);
+    border: 2px solid #1e9e57;
     background: var(--verde-claro);
 }
 
 .data-opcao:has(input:checked) .data-icone {
     background: #c9ecd9;
-    color: var(--verde);
+    color: #1e9e57;
 }
 
 .data-opcao:has(input:checked) strong,
 .data-opcao:has(input:checked) small {
-    color: var(--verde);
+    color: #1e9e57;
 }
 
 .btn-reservar {
@@ -539,7 +537,7 @@ input:focus-visible + .data-icone {
     justify-content: center;
 
     border-radius: 50%;
-    background: var(--verde);
+    background: #1e9e57;
     color: white;
 }
 
@@ -637,8 +635,8 @@ input:focus-visible + .data-icone {
 }
 
 .filtro.ativo {
-    border-color: var(--verde);
-    background: var(--verde);
+    border-color: #1e9e57;
+    background: #1e9e57;
     color: white;
     font-weight: 700;
 }
@@ -794,7 +792,7 @@ input:focus-visible + .data-icone {
 }
 
 .acao-icone.azul { background: var(--azul); }
-.acao-icone.verde { background: var(--verde); }
+.acao-icone.verde { background: #1e9e57; }
 
 
 /* ==================================================
@@ -911,7 +909,7 @@ input:focus-visible + .data-icone {
     margin-bottom: 8px;
 }
 
-.incluso h3 { color: var(--verde); }
+.incluso h3 { color: #1e9e57; }
 .nao-incluso h3 { color: var(--vermelho); }
 
 .incluso h3 .ic,
@@ -931,7 +929,7 @@ input:focus-visible + .data-icone {
     margin-bottom: 5px;
 }
 
-.incluso li .ic { color: var(--verde); width: 15px; height: 15px; }
+.incluso li .ic { color: #1e9e57; width: 15px; height: 15px; }
 .nao-incluso li .ic { color: var(--vermelho); width: 15px; height: 15px; }
 
 
@@ -974,7 +972,7 @@ input:focus-visible + .data-icone {
     font-weight: 500;
     line-height: 1.3;
     text-align: right;
-    color: var(--azul);
+    color: #009fa3;
 }
 
 .onda {
@@ -986,7 +984,7 @@ input:focus-visible + .data-icone {
 }
 
 .onda-azul { fill: #5db5ea; }
-.onda-verde { fill: var(--verde); }
+.onda-verde { fill: #1e9e57; }
 
 
 /* ==================================================

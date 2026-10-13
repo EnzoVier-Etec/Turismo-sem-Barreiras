@@ -113,8 +113,8 @@ button {
 }
 
 .logo-area > img {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
@@ -287,28 +287,21 @@ button {
 /* Rodapé */
 footer {
     background: #0c0636;
-
     color: white;
-
     padding: 40px 0;
 }
 
 .footer-content {
     width: 94%;
     max-width: 1200px;
-
     margin: auto;
-
     display: grid;
-
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
-
     gap: 40px;
 }
 
 .footer-content h3 {
-    font-size: 14px;
-
+    font-size: 16px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -321,33 +314,30 @@ footer {
 
 .footer-content h4 {
     color: #9fd86b;
-
-    font-size: 11px;
-
+    font-size: 12px;
     margin-bottom: 12px;
 }
 
 .footer-content p {
     color: white;
-
-    font-size: 8px;
-
+    font-size: 10px;
     line-height: 1.5;
 }
 
 .footer-logo p {
     max-width: 200px;
-
     margin-top: 10px;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
 }
 
 .footer-content a {
     display: block;
-
     color: white;
-
-    font-size: 8px;
-
+    font-size: 10px;
     margin-bottom: 7px;
 }
 
