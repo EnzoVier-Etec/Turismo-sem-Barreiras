@@ -322,8 +322,35 @@ input:focus-visible + .data-icone {
 
 .galeria-mini {
     display: flex;
-    flex-direction: column;
     gap: 8px;
+}
+
+.galeria-mini-lado {
+    flex-direction: column;
+    height: 330px;           /* mesma altura da foto principal */
+}
+
+.galeria-mini-lado .mini {
+    flex: 1;
+    min-height: 0;
+}
+
+.galeria-mini-baixo {
+    grid-column: 1 / -1;     /* ocupa toda a largura, embaixo da foto principal */
+}
+
+.galeria-mini-baixo .mini {
+    flex: 1;
+    min-width: 0;
+    height: 70px;
+}
+
+.mini {
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    background: none;
 }
 
 .mini {
@@ -489,7 +516,7 @@ input:focus-visible + .data-icone {
 
     border: none;
     border-radius: 30px;
-    background: var(--verde);
+    background: #1e9e57;
     color: white;
 
     font-size: 15px;
@@ -858,8 +885,8 @@ input:focus-visible + .data-icone {
 }
 
 .dia-conteudo img {
-    width: 80px;
-    height: 48px;
+    width: 100px;
+    height: 60px;
     border-radius: 6px;
     object-fit: cover;
 }

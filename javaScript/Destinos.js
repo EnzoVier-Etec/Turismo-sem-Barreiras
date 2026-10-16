@@ -29,7 +29,6 @@ miniaturas.forEach((mini, i) => {
 document.getElementById("foto-anterior").addEventListener("click", () => mostrarFoto(atual - 1));
 document.getElementById("foto-proxima").addEventListener("click", () => mostrarFoto(atual + 1));
 
-
 // Filtros das fotos do passeio
 const filtros = document.querySelectorAll(".filtro");
 const cards = document.querySelectorAll(".foto-card");

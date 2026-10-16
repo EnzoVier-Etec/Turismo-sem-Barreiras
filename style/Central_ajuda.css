@@ -1,4 +1,6 @@
-/* Configurações gerais */
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+================================================== */
 
 * {
     margin: 0;
@@ -34,7 +36,10 @@ select {
     outline-offset: 3px;
 }
 
-/* Foco */
+
+/* ==================================================
+   FOCO PARA ACESSIBILIDADE
+================================================== */
 
 a:focus-visible,
 button:focus-visible,
@@ -43,70 +48,81 @@ summary:focus-visible {
     outline-offset: 4px;
 }
 
-/* Barra superior */
+
+/* ==================================================
+   BARRA SUPERIOR
+================================================== */
+
 .top-bar {
-    height: 36px;
+    min-height: 42px;
     background: #f5f5f5;
-    border-bottom: 1px solid #e5e5e5;
-    font-size: 14px;
+    border-bottom: 1px solid #ddd;
 }
 
 .top-container {
     width: 94%;
     max-width: 1200px;
-    height: 100%;
-    margin: auto;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 45px;
-}
-
-.telefone {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-
-    font-size: 12px;
-    color: #555;
-}
-
-.telefone img {
-    width: 18px;
-    height: 18px;
-}
-
-.links-topo {
-    display: flex;
-    gap: 45px;
-}
-
-.links-topo a {
-    color: #555;
-    font-size: 12px;
-}
-
-.links-topo a:hover {
-    color: #059b9a;
-}
-
-
-/* Cabeçalho */
-.header {
-    background: white;
-    border-bottom: 1px solid #eeeeee;
-}
-
-.header-container {
-    width: 94%;
-    max-width: 1200px;
-    height: 70px;
+    min-height: 42px;
     margin: auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    gap: 30px;
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    color: #444;
+}
+
+.telefone img {
+    width: 20px;
+    height: 20px;
+}
+
+.links-topo {
+    display: flex;
+    gap: 35px;
+}
+
+.links-topo a {
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.links-topo a:hover {
+    color: #007f82;
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+.header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+    width: 94%;
+    max-width: 1200px;
+    min-height: 80px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
 }
 
 .logo-area {
@@ -116,37 +132,37 @@ summary:focus-visible {
 }
 
 .logo-area > img {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     object-fit: contain;
 }
 
 .logo-text h1 {
-    font-size: 23px;
+    font-size: 24px;
     color: #0c0636;
-    margin-bottom: 0;
+    line-height: 1.2;
 }
 
 .logo-text h1 span {
-    color: #059b9a;
+    color: #008f92;
 }
 
 .logo-text p {
-    color: #555;
-    font-size: 12px;
-    margin-top: 2px;
+    color: #666;
+    font-size: 13px;
+    margin-top: 4px;
 }
 
 .btn-login {
+    min-height: 44px;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
+
     gap: 8px;
-
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    padding: 8px 17px;
-
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 600;
 
     color: #0c0636;
@@ -154,8 +170,8 @@ summary:focus-visible {
 }
 
 .btn-login img {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
 }
 
 .btn-login:hover {
@@ -163,58 +179,64 @@ summary:focus-visible {
 }
 
 
-/* Menu */
+
+/* ==================================================
+   MENU
+================================================== */
+
 .menu-container {
-    height: 58px;
-    border-bottom: 1px solid #eee;
+    background: white;
+    border-bottom: 1px solid #ddd;
 }
 
 #menu {
+    width: 94%;
     max-width: 1200px;
-    height: 100%;
-    margin-left: calc((100% - 1200px) / 2); /* serve para dar o espaçamento dos link para as bordas */
+    min-height: 62px;
+    margin: auto;
 
     display: flex;
-    align-items: center;
-    gap: 27px;
+    align-items: stretch;
+    gap: 28px;
 }
 
 #menu a {
-    height: 100%;
+    min-height: 62px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    gap: 4px;
+    gap: 5px;
 
-    text-decoration: none;
-    color: #555;
-    font-size: 12px;
+    color: #444;
 
-    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    border-bottom: 3px solid transparent;
+
+    transition: 0.2s;
 }
 
 #menu a img {
-    width: 19px;
-    height: 19px;
+    width: 21px;
+    height: 21px;
     object-fit: contain;
 }
 
-#menu a.active {
-    color: #009fa3;
+#menu a:hover {
+    color: #008f92;
 }
 
-/* O after é o comando resposável  palo sublinado de baixo do link( Para isso não podemos definir o link-decor: como none )*/
-#menu a.active::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #009fa3;
+#menu a.active {
+    color: #008f92;
+    border-bottom-color: #008f92;
 }
+
 
 /* ==================================================
    CONTEÚDO
@@ -386,7 +408,9 @@ button.botao-contato {
 }
 
 
-/* Dúvidas Frequentes */
+/* ==================================================
+   DÚVIDAS FREQUENTES
+================================================== */
 
 .duvidas {
     max-width: 850px;
@@ -447,7 +471,9 @@ button.botao-contato {
 }
 
 
-/* Botão Flutuante */
+/* ==================================================
+   BOTÃO FLUTUANTE
+================================================== */
 
 .but-touch {
     position: fixed;
@@ -464,9 +490,13 @@ button.botao-contato {
     align-items: center;
     justify-content: center;
 
-    border: none;
+    border: 2px solid white;
     border-radius: 50%;
+
     background: #53ba83;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.25);
 
     transition:
         transform 0.2s,
@@ -483,147 +513,368 @@ button.botao-contato {
     height: 31px;
 }
 
-/* Rodapé */
+
+/* ==================================================
+   RODAPÉ
+================================================== */
 
 footer {
     background: #0c0636;
+
     color: white;
-    padding: 40px 0;
+
+    padding: 50px 0;
 }
 
 .footer-content {
     width: 94%;
     max-width: 1200px;
+
     margin: auto;
+
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 40px;
+
+    grid-template-columns:
+        2fr 1fr 1.2fr 1.5fr;
+
+    gap: 45px;
 }
 
-.footer-content h3 {
-    font-size: 16px;
+.footer-logo h3 {
     display: flex;
     align-items: center;
-    gap: 8px;
+
+    gap: 10px;
+
+    color: white;
+
+    font-size: 17px;
 }
 
-.footer-content h3 img {
-    width: 24px;
-    height: 24px;
+.footer-logo h3 img {
+    width: 45px;
+    height: 45px;
+}
+
+.footer-logo p {
+    max-width: 280px;
+
+    margin-top: 15px;
+
+    color: #eee;
+
+    font-size: 14px;
+
+    line-height: 1.6;
 }
 
 .footer-content h4 {
     color: #9fd86b;
-    font-size: 12px;
-    margin-bottom: 12px;
-}
 
-.footer-content p {
-    color: white;
-    font-size: 10px;
-    line-height: 1.5;
-}
+    font-size: 15px;
 
-.footer-logo p {
-    max-width: 200px;
-    margin-top: 10px;
-}
-
-.footer-logo img {
-    width: 40px;
-    height: 40px;
+    margin-bottom: 16px;
 }
 
 .footer-content a {
     display: block;
+
     color: white;
-    font-size: 10px;
-    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    margin-bottom: 11px;
+}
+
+.footer-content a:hover {
+    color: #9fd86b;
+    text-decoration: underline;
+}
+
+.footer-content > div > p {
+    color: white;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 10px;
 }
 
 
-/* Responsividade */
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
-    .search-fields {
-        flex-wrap: wrap;
+    .contatos-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .input-box {
-        min-width: 45%;
-    }
-
-    .search {
+    .contato-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 400px;
         width: 100%;
-    }
-
-    .destinos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .agencia-section {
-        grid-template-columns: 1fr;
+        margin: auto;
     }
 
     .footer-content {
         grid-template-columns: 1fr 1fr;
     }
+
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
-    .top-container {
-        justify-content: center;
-    }
-
-    .links-topo {
+    .top-bar {
         display: none;
     }
 
     .header-container {
-        height: 65px;
+        min-height: 78px;
+    }
+
+    .logo-area > img {
+        width: 45px;
+        height: 45px;
     }
 
     .logo-text h1 {
-        font-size: 15px;
+        font-size: 18px;
+    }
+
+    .logo-text p {
+        font-size: 11px;
+    }
+
+    .btn-login {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .btn-login img {
+        display: none;
     }
 
     #menu {
+        width: max-content;
+        min-height: 65px;
+
+        margin-left: 15px;
+
+        gap: 22px;
+
         overflow-x: auto;
-        justify-content: flex-start;
     }
 
-    .hero {
-        min-height: 500px;
+    .menu-container {
+        overflow-x: auto;
     }
 
-    .hero h2 {
-        font-size: 34px;
+    .conteudo-ajuda {
+        padding-top: 40px;
     }
 
-    .search-fields {
-        flex-direction: column;
+    .cabecalho-ajuda h2 {
+        font-size: 28px;
     }
 
-    .input-box {
-        width: 100%;
+    .cabecalho-ajuda p {
+        font-size: 16px;
     }
 
-    .destinos-grid {
+    .contatos-grid {
         grid-template-columns: 1fr;
     }
 
-    .passos-grid {
-        grid-template-columns: 1fr;
+    .contato-card:last-child {
+        grid-column: auto;
+        max-width: none;
     }
 
-    .agencia-section {
-        grid-template-columns: 1fr;
+    .contato-card p {
+        min-height: auto;
+    }
+
+    .contatos > h3,
+    .duvidas > h3 {
+        font-size: 22px;
+    }
+
+    .lista-duvidas summary {
+        font-size: 16px;
     }
 
     .footer-content {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
+
+    .but-touch {
+        width: 58px;
+        height: 58px;
+
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .contato-card {
+    opacity: 0;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.2s;
+}
+
+.contato-card.card-visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================= MODAL ================= */
+
+.modal-atendimento {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.modal-atendimento-conteudo {
+    position: relative;
+
+    width: min(520px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    color: #0c0636;
+}
+
+.modal-atendimento-conteudo h2 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.modal-atendimento-conteudo > p {
+    color: #555;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+.fechar-atendimento {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #100633;
+
+    color: white;
+
+    font-size: 26px;
+
+    cursor: pointer;
+}
+
+.opcoes-atendimento {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.opcao-atendimento {
+    min-height: 65px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    padding: 12px 16px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #0c0636;
+
+    text-align: left;
+
+    font-size: 15px;
+}
+
+.opcao-atendimento:hover {
+    border-color: #009fa3;
+
+    background: #f1f9f9;
+}
+
+.opcao-atendimento strong {
+    font-size: 16px;
+}
+
+.opcao-atendimento span {
+    color: #555;
+
+    font-size: 13px;
+}
+
+button.opcao-atendimento {
+    width: 100%;
+
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+.mensagem-copia {
+    min-height: 24px;
+
+    margin-top: 15px;
+
+    color: #00805f !important;
+
+    font-size: 14px !important;
+}
+
 }

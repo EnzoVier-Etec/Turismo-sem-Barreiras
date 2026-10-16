@@ -1,4 +1,6 @@
-/* Configurações gerais */
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================ */
 
 * {
     margin: 0;
@@ -6,23 +8,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: Arial, sans-serif;
     color: #0c0636;
-    background: white;
-}
-
-h1 {
-    font-size: 20px;
-}
-
-h3 {
-    font-family: 16px;
-}
-
-p {
-    font-size: 12px;
-    color: #4D4D4D;
+    background: #ffffff;
+    line-height: 1.6;
 }
 
 img {
@@ -39,33 +33,36 @@ button {
     cursor: pointer;
 }
 
-/* Barra superior */
+
+/* ==============================
+   BARRA SUPERIOR
+================================ */
+
 .top-bar {
-    height: 36px;
+    min-height: 42px;
     background: #f5f5f5;
     border-bottom: 1px solid #e5e5e5;
-    font-size: 14px;
 }
 
 .top-container {
     width: 94%;
     max-width: 1200px;
-    height: 100%;
+    min-height: 42px;
     margin: auto;
 
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 45px;
+    gap: 40px;
 }
 
 .telefone {
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 8px;
 
-    font-size: 12px;
-    color: #555;
+    font-size: 14px;
+    color: #444;
 }
 
 .telefone img {
@@ -75,12 +72,13 @@ button {
 
 .links-topo {
     display: flex;
-    gap: 45px;
+    gap: 30px;
 }
 
 .links-topo a {
-    color: #555;
-    font-size: 12px;
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .links-topo a:hover {
@@ -88,7 +86,10 @@ button {
 }
 
 
-/* Cabeçalho */
+/* ==============================
+   CABEÇALHO
+================================ */
+
 .header {
     background: white;
     border-bottom: 1px solid #eeeeee;
@@ -97,7 +98,7 @@ button {
 .header-container {
     width: 94%;
     max-width: 1200px;
-    height: 70px;
+    min-height: 82px;
     margin: auto;
 
     display: flex;
@@ -112,15 +113,15 @@ button {
 }
 
 .logo-area > img {
-    width: 60px;
-    height: 60px;
+    width: 52px;
+    height: 52px;
     object-fit: contain;
 }
 
 .logo-text h1 {
-    font-size: 23px;
+    font-size: 22px;
     color: #0c0636;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .logo-text h1 span {
@@ -128,21 +129,21 @@ button {
 }
 
 .logo-text p {
-    color: #555;
-    font-size: 12px;
+    color: #666;
+    font-size: 13px;
     margin-top: 2px;
 }
 
 .btn-login {
+    min-height: 44px;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
+
     gap: 8px;
-
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    padding: 8px 17px;
-
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 600;
 
     color: #0c0636;
@@ -150,8 +151,8 @@ button {
 }
 
 .btn-login img {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
 }
 
 .btn-login:hover {
@@ -159,83 +160,168 @@ button {
 }
 
 
-/* Menu */
+/* ==============================
+   MENU
+================================ */
+
 .menu-container {
-    height: 58px;
-    border-bottom: 1px solid #eee;
+    background: white;
+    border-bottom: 1px solid #eeeeee;
 }
 
 #menu {
     max-width: 1200px;
-    height: 100%;
-    margin-left: calc((100% - 1200px) / 2); /* serve para dar o espaçamento dos link para as bordas */
+    width: 94%;
+    margin: auto;
+
+    min-height: 62px;
 
     display: flex;
     align-items: center;
-    gap: 27px;
+    gap: 28px;
 }
 
 #menu a {
-    height: 100%;
+    min-height: 62px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    gap: 4px;
+    gap: 5px;
 
-    text-decoration: none;
     color: #555;
-    font-size: 12px;
 
-    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    border-bottom: 3px solid transparent;
+
+    transition: 0.2s;
 }
 
 #menu a img {
-    width: 19px;
-    height: 19px;
+    width: 22px;
+    height: 22px;
     object-fit: contain;
 }
 
+#menu a:hover {
+    color: #059b9a;
+}
+
 #menu a.active {
-    color: #009fa3;
+    color: #059b9a;
+    border-bottom-color: #059b9a;
 }
 
-/* O after é o comando resposável  palo sublinado de baixo do link( Para isso não podemos definir o link-decor: como none )*/
-#menu a.active::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #009fa3;
+
+/* ==============================
+   INTRODUÇÃO
+================================ */
+
+.intro-section {
+    background: #f7fbfa;
+    padding: 55px 20px;
 }
 
-/* Seletion  */
-.selo-section {
-    max-width: 1200px;
+.out-box {
     width: 94%;
-
-    margin: 25px auto;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
 }
+
+.subtitulo {
+    display: inline-block;
+
+    color: #059b9a;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+.out-box h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+    color: #0c0636;
+}
+
+.out-box p {
+    font-size: 19px;
+    color: #4d4d4d;
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/* ==============================
+   ETAPAS
+================================ */
+
+.etapas-section {
+    width: 94%;
+    max-width: 1100px;
+
+    margin: 55px auto;
+    margin-top: 20px;
+}
+
+.etapas-section > h2 {
+    text-align: center;
+
+    font-size: 28px;
+
+    margin-bottom: 30px;
+}
+
+.etapas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* Cards */
 
 .selo {
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    border: 2px solid #ddd;
+    border-radius: 14px;
 
-    padding: 18px;
+    padding: 25px;
 
     display: flex;
-    align-items: center;
-    gap: 15px;
+    align-items: flex-start;
+    gap: 20px;
+
+    background: white;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+.selo:hover {
+    transform: translateY(-3px);
+    border-color: #059b9a;
+
+    box-shadow: 0 6px 18px rgba(12, 6, 54, 0.08);
 }
 
 .selo-icon {
-    min-width: 40px;
-    height: 40px;
+    min-width: 52px;
+    width: 52px;
+    height: 52px;
 
-    border-radius: 10px;
+    border-radius: 50%;
 
     background: #e4f7ee;
 
@@ -243,35 +329,169 @@ button {
     align-items: center;
     justify-content: center;
 
-    color: #53ba83;
+    color: #087c65;
+
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.selo-content {
+    flex: 1;
 }
 
 .selo h3 {
-    font-size: 12px;
+    font-size: 19px;
+    color: #0c0636;
+    margin-bottom: 7px;
 }
 
 .selo p {
-    font-size: 9px;
-    color: #666;
+    font-size: 16px;
+    color: #555;
+
+    margin-bottom: 8px;
+}
+
+.link-etapa {
+    display: inline-block;
+
+    color: #059b9a;
+
+    font-size: 15px;
+    font-weight: 700;
 
     margin-top: 4px;
 }
 
-.selo a {
-    margin-left: auto;
-
-    color: #059b9a;
-
-    font-size: 9px;
-    font-weight: 700;
+.link-etapa:hover {
+    text-decoration: underline;
 }
 
 
+/* ==============================
+   BENEFÍCIOS
+================================ */
+
+.beneficios-section {
+    width: 94%;
+    max-width: 1100px;
+
+    margin: 0 auto 60px;
+}
+
+.beneficios-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.beneficio {
+    background: #f0f9f8;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.beneficio-icon {
+    min-width: 35px;
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #53ba83;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.beneficio h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.beneficio p {
+    color: #555;
+    font-size: 15px;
+}
+
+
+/* ==============================
+   CTA
+================================ */
+
+.cta-section {
+    background: #0c0636;
+
+    padding: 55px 20px;
+
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.cta-content h2 {
+    color: white;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.cta-content p {
+    color: white;
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+.btn-pacotes {
+    display: inline-block;
+
+    background: #53ba83;
+
+    color: #ffffff;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.btn-pacotes:hover {
+    background: #42a972;
+
+    transform: translateY(-2px);
+}
+
+
+
 /* Rodapé */
+
 footer {
     background: #0c0636;
     color: white;
-    padding: 40px 0;
+    padding: 45px 0;
 }
 
 .footer-content {
@@ -284,32 +504,32 @@ footer {
 }
 
 .footer-content h3 {
-    font-size: 16px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 .footer-content h3 img {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
 }
 
 .footer-content h4 {
     color: #9fd86b;
-    font-size: 12px;
-    margin-bottom: 12px;
+    font-size: 17px;
+    margin-bottom: 15px;
 }
 
 .footer-content p {
     color: white;
-    font-size: 10px;
-    line-height: 1.5;
+    font-size: 15px;
+    line-height: 1.7;
 }
 
 .footer-logo p {
-    max-width: 200px;
-    margin-top: 10px;
+    max-width: 300px;
+    margin-top: 12px;
 }
 
 .footer-logo img {
@@ -320,42 +540,70 @@ footer {
 .footer-content a {
     display: block;
     color: white;
-    font-size: 10px;
-    margin-bottom: 7px;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-content a:hover {
+    color: #9fd86b;
+    text-decoration: underline;
+}
+
+/* ==============================
+   ACESSIBILIDADE
+================================ */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 4px solid #f5c542;
+    outline-offset: 4px;
 }
 
 
-/* Responsividade */
+/* ==============================
+   ANIMAÇÃO
+================================ */
 
-@media (max-width: 800px) {
+.selo,
+.beneficio {
+    opacity: 1;
+    transform: translateY(0);
 
-    .search-fields {
-        flex-wrap: wrap;
-    }
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
 
-    .input-box {
-        min-width: 45%;
-    }
+.selo.visivel,
+.beneficio.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    .search {
-        width: 100%;
-    }
 
-    .destinos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* ==============================
+   RESPONSIVIDADE
+================================ */
 
-    .agencia-section {
+@media (max-width: 900px) {
+
+    .beneficios-container {
         grid-template-columns: 1fr;
     }
 
     .footer-content {
         grid-template-columns: 1fr 1fr;
     }
+
+    .out-box h2 {
+        font-size: 32px;
+    }
+
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
     .top-container {
         justify-content: center;
@@ -365,23 +613,121 @@ footer {
         display: none;
     }
 
+
     .header-container {
-        height: 65px;
+        min-height: 75px;
+    }
+
+    .logo-area > img {
+        width: 42px;
+        height: 42px;
     }
 
     .logo-text h1 {
+        font-size: 17px;
+    }
+
+    .logo-text p {
+        font-size: 11px;
+    }
+
+    .btn-login {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .btn-login img {
+        display: none;
+    }
+
+
+    #menu {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        gap: 22px;
+    }
+
+    #menu a {
+        font-size: 12px;
+    }
+
+
+    .intro-section {
+        padding: 40px 15px;
+    }
+
+    .out-box h2 {
+        font-size: 28px;
+    }
+
+    .out-box p {
+        font-size: 17px;
+    }
+
+
+    .etapas-section {
+        margin-top: 40px;
+    }
+
+    .etapas-section > h2 {
+        font-size: 24px;
+    }
+
+
+    .selo {
+        padding: 20px;
+
+        gap: 14px;
+    }
+
+    .selo-icon {
+        min-width: 44px;
+        width: 44px;
+        height: 44px;
+
+        font-size: 18px;
+    }
+
+    .selo h3 {
+        font-size: 17px;
+    }
+
+    .selo p {
         font-size: 15px;
     }
 
-    .hero {
-        min-height: 500px;
+
+    .cta-content h2 {
+        font-size: 25px;
     }
 
-    .agencia-section {
-        grid-template-columns: 1fr;
-    }
 
     .footer-content {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+}
+
+
+/* Usuário prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .selo,
+    .beneficio {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .btn-pacotes,
+    .selo {
+        transition: none;
     }
 }

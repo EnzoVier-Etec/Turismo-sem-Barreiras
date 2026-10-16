@@ -107,7 +107,7 @@
                 <div class="galeria">
 
                     <div class="galeria-principal">
-                        <img id="foto-principal" src="assets/aramar-principal.jpg" alt="Passarela acessível levando à praia de Aramar">
+                        <img id="foto-principal" src="assets/FN-principal.png" alt="Passarela acessível levando à praia de Aramar">
 
                         <button type="button" class="seta seta-esq" id="foto-anterior" aria-label="Foto anterior">
                             <svg class="ic"><use href="#i-left"/></svg>
@@ -122,11 +122,23 @@
                         </span>
                     </div>
 
-                    <div class="galeria-mini">
-                        <button type="button" class="mini"><img src="assets/aramar-1.jpg" alt="Vista aérea da praia"></button>
-                        <button type="button" class="mini"><img src="assets/aramar-2.jpg" alt="Quiosque na praia"></button>
-                        <button type="button" class="mini"><img src="assets/aramar-3.jpg" alt="Coqueiros na orla"></button>
-                        <button type="button" class="mini"><img src="assets/aramar-4.jpg" alt="Pôr do sol em Aramar"></button>
+                    <div class="galeria-mini galeria-mini-lado">
+                        <!-- Imagens Fernado de Noronha -->
+                        <button type="button" class="mini"><img src="assets/FN.png" alt="Vista aérea da praia"></button>
+                        <button type="button" class="mini"><img src="assets/FN1.png" alt="Quiosque na praia"></button>
+                        <button type="button" class="mini"><img src="assets/FN2.png" alt="Coqueiros na orla"></button>
+                        <button type="button" class="mini"><img src="assets/FN3.png" alt="Pôr do sol em Aramar"></button>
+                        <button type="button" class="mini"><img src="assets/FN4.png" alt="Pôr do sol em Aramar"></button>
+                    </div>
+
+                    <div class="galeria-mini galeria-mini-baixo"> 
+                        <button type="button" class="mini"><img src="assets/FN-hotel.png" alt="Pôr do sol em Aramar"></button>
+                        <button type="button" class="mini"><img src="assets/FN-hotel1.png" alt="Pôr do sol em Aramar"></button>                       
+                        <button type="button" class="mini"><img src="assets/FN-restaurante.png" alt="Pôr do sol em Aramar"></button>
+                        <button type="button" class="mini"><img src="assets/FN-restaurante1.png" alt="Pôr do sol em Aramar"></button>
+                        <button type="button" class="mini"><img src="assets/FN-restaurante2.png" alt="Pôr do sol em Aramar"></button>
+                        <button type="button" class="mini"><img src="assets/FN-quarto.png" alt="Pôr do sol em Aramar"></button>
+                        <button type="button" class="mini"><img src="assets/FN-banheiro.png" alt="Pôr do sol em Aramar"></button>
                     </div>
 
                 </div>
@@ -136,7 +148,7 @@
             <aside class="reserva" aria-label="Reserva">
 
                 <p class="reserva-de">A partir de</p>
-                <p class="reserva-preco">R$ 1.890,00</p>
+                <p class="reserva-preco">R$ 4.890,00</p>
                 <p class="reserva-por">por pessoa</p>
 
                 <p class="parcelas">
@@ -236,7 +248,7 @@
                     Fotos do passeio
                 </h3>
                 <a href="#" class="ver-todas">
-                    Ver todas (24)
+                    Ver todas (13)
                     <svg class="ic"><use href="#i-right"/></svg>
                 </a>
             </div>
@@ -251,8 +263,8 @@
 
             <div class="fotos-grid">
 
-                <figure class="foto-card" data-categoria="passeios">
-                    <img src="assets/foto-praia.jpg" alt="Praia com passarela de acesso adaptado">
+                <figure class="foto-card" data-categoria="passeios" id="foto-card">
+                    <img src="assets/FN-acesso adptado.png" alt="Praia com passarela de acesso adaptado">
                     <figcaption>
                         <span class="foto-icones">
                             <svg class="ic"><use href="#i-access"/></svg>
@@ -264,7 +276,7 @@
                 </figure>
 
                 <figure class="foto-card" data-categoria="hospedagem">
-                    <img src="assets/foto-hospedagem.jpg" alt="Quarto de hotel adaptado">
+                    <img src="assets/FN-hotel.png" alt="Quarto de hotel adaptado">
                     <figcaption>
                         <span class="foto-icones">
                             <svg class="ic"><use href="#i-access"/></svg>
@@ -276,19 +288,19 @@
                 </figure>
 
                 <figure class="foto-card" data-categoria="transporte">
-                    <img src="assets/foto-transporte.jpg" alt="Ônibus com rampa de acesso para cadeirantes">
+                    <img src="assets/barco-adaptado.jpg" alt="Barco acessível para pessoas com pouca mobilidade">
                     <figcaption>
                         <span class="foto-icones">
                             <svg class="ic"><use href="#i-access"/></svg>
                             <svg class="ic"><use href="#i-eye"/></svg>
                             <svg class="ic"><use href="#i-ear"/></svg>
                         </span>
-                        Transporte terrestre adaptado
+                        Transporte aquatico adaptado
                     </figcaption>
                 </figure>
 
                 <figure class="foto-card" data-categoria="comida">
-                    <img src="assets/foto-comida.jpg" alt="Prato típico da culinária regional">
+                    <img src="assets/FN-restaurante.png" alt="Prato típico da culinária regional">
                     <figcaption>
                         <span class="foto-icones">
                             <svg class="ic"><use href="#i-access"/></svg>
@@ -362,7 +374,7 @@
                     <svg class="ic seta-dia"><use href="#i-down"/></svg>
                 </summary>
                 <div class="dia-conteudo">
-                    <img src="assets/roteiro-dia1.jpg" alt="Orla de Aramar">
+                    <img src="assets/transporte-adaptado.png" alt="Check-in">
                     <p>Transfer do aeroporto até o hotel. Check-in e recepção da equipe. Tarde livre para descansar e conhecer a região.</p>
                 </div>
             </details>
@@ -381,11 +393,11 @@
             <details class="dia">
                 <summary>
                     <svg class="ic"><use href="#i-calendar"/></svg>
-                    Dia 3 - Centro Histórico
+                    Dia 3 - Passeio de Barco
                     <svg class="ic seta-dia"><use href="#i-down"/></svg>
                 </summary>
                 <div class="dia-conteudo">
-                    <p>Passeio guiado pelo Centro Histórico, com rotas de piso regular e paradas para descanso.</p>
+                    <p>Passeios de barco com profissionais capacitados, embarcações acessíveis e equipamentos adaptados, garantindo segurança, conforto e inclusão para pessoas com mobilidade reduzida.</p>
                 </div>
             </details>
 
@@ -413,8 +425,8 @@
                 </h3>
                 <ul>
                     <li><svg class="ic"><use href="#i-check"/></svg> Hospedagem adaptada</li>
-                    <li><svg class="ic"><use href="#i-check"/></svg> Transporte terrestre adaptado</li>
-                    <li><svg class="ic"><use href="#i-check"/></svg> Guia especializado</li>
+                    <li><svg class="ic"><use href="#i-check"/></svg> Transporte terrestre e aquático adaptado</li>
+                    <li><svg class="ic"><use href="#i-check"/></svg> Profissionais Capacitados</li>
                     <li><svg class="ic"><use href="#i-check"/></svg> Alimentação (café da manhã, almoço e jantar)</li>
                 </ul>
             </div>

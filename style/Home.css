@@ -1,4 +1,5 @@
-/* Configurações gerais */
+
+/* ================= CONFIGURAÇÕES GERAIS ================= */
 
 * {
     margin: 0;
@@ -7,9 +8,11 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #0c0636;
     background: white;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 img {
@@ -26,71 +29,89 @@ button {
     cursor: pointer;
 }
 
+/* Foco acessível para teclado */
 
-/* Barra superior */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #009fa3;
+    outline-offset: 3px;
+}
+
+
+/* ================= BARRA SUPERIOR ================= */
+
 .top-bar {
-    height: 36px;
+    min-height: 42px;
     background: #f5f5f5;
-    border-bottom: 1px solid #e5e5e5;
-    font-size: 14px;
+    border-bottom: 1px solid #ddd;
 }
 
 .top-container {
     width: 94%;
     max-width: 1200px;
-    height: 100%;
-    margin: auto;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 45px;
-}
-
-.telefone {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-
-    font-size: 12px;
-    color: #555;
-}
-
-.telefone img {
-    width: 18px;
-    height: 18px;
-}
-
-.links-topo {
-    display: flex;
-    gap: 45px;
-}
-
-.links-topo a {
-    color: #555;
-    font-size: 12px;
-}
-
-.links-topo a:hover {
-    color: #059b9a;
-}
-
-
-/* Cabeçalho */
-.header {
-    background: white;
-    border-bottom: 1px solid #eeeeee;
-}
-
-.header-container {
-    width: 94%;
-    max-width: 1200px;
-    height: 70px;
+    min-height: 42px;
     margin: auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    gap: 30px;
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    color: #444;
+}
+
+.telefone img {
+    width: 20px;
+    height: 20px;
+}
+
+.links-topo {
+    display: flex;
+    gap: 35px;
+}
+
+.links-topo a {
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.links-topo a:hover {
+    color: #007f82;
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+.header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+    width: 94%;
+    max-width: 1200px;
+    min-height: 80px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
 }
 
 .logo-area {
@@ -100,37 +121,37 @@ button {
 }
 
 .logo-area > img {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     object-fit: contain;
 }
 
 .logo-text h1 {
-    font-size: 23px;
+    font-size: 24px;
     color: #0c0636;
-    margin-bottom: 0;
+    line-height: 1.2;
 }
 
 .logo-text h1 span {
-    color: #059b9a;
+    color: #008f92;
 }
 
 .logo-text p {
-    color: #555;
-    font-size: 12px;
-    margin-top: 2px;
+    color: #666;
+    font-size: 13px;
+    margin-top: 4px;
 }
 
 .btn-login {
+    min-height: 44px;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
+
     gap: 8px;
-
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    padding: 8px 17px;
-
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 600;
 
     color: #0c0636;
@@ -138,8 +159,8 @@ button {
 }
 
 .btn-login img {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
 }
 
 .btn-login:hover {
@@ -147,71 +168,72 @@ button {
 }
 
 
-/* Menu */
+
+/* ==================================================
+   MENU
+================================================== */
+
 .menu-container {
-    height: 58px;
-    border-bottom: 1px solid #eee;
+    background: white;
+    border-bottom: 1px solid #ddd;
 }
 
 #menu {
+    width: 94%;
     max-width: 1200px;
-    height: 100%;
-    margin-left: calc((100% - 1200px) / 2); /* serve para dar o espaçamento dos link para as bordas */
+    min-height: 62px;
+    margin: auto;
 
     display: flex;
-    align-items: center;
-    gap: 27px;
+    align-items: stretch;
+    gap: 28px;
 }
 
 #menu a {
-    height: 100%;
+    min-height: 62px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    gap: 4px;
+    gap: 5px;
 
-    text-decoration: none;
-    color: #555;
-    font-size: 12px;
+    color: #444;
 
-    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    border-bottom: 3px solid transparent;
+
+    transition: 0.2s;
 }
 
 #menu a img {
-    width: 19px;
-    height: 19px;
+    width: 21px;
+    height: 21px;
     object-fit: contain;
 }
 
+#menu a:hover {
+    color: #008f92;
+}
+
 #menu a.active {
-    color: #009fa3;
+    color: #008f92;
+    border-bottom-color: #008f92;
 }
 
-/* O after é o comando resposável  palo sublinado de baixo do link( Para isso não podemos definir o link-decor: como none )*/
-#menu a.active::after {
-    content: "";
-
-    position: absolute;
-    bottom: 0;
-
-    width: 100%;
-    height: 2px;
-
-    background: #009fa3;
-}
-
-
-/* Banner */
+/* ================= BANNER ================= */
 
 .hero {
-    min-height: 425px;
+    min-height: 470px;
 
     position: relative;
 
-    background-image: url("assets/banner.jpg");
+    background-image: url("../assets/banner.jpg");
     background-size: cover;
     background-position: center;
 
@@ -223,7 +245,7 @@ button {
     position: absolute;
     inset: 0;
 
-    background: rgba(0, 0, 0, 0.40);
+    background: rgba(0, 0, 0, 0.48);
 }
 
 .hero-content {
@@ -234,122 +256,156 @@ button {
     max-width: 1200px;
 
     margin: auto;
-    padding-top: 30px;
+
+    padding: 40px 0;
 }
 
 .hero-tag {
     display: inline-block;
 
-    background: #9fd86b;
+    background: #a8df78;
     color: #0c0636;
 
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: bold;
 
-    padding: 5px 12px;
+    padding: 7px 14px;
+
     border-radius: 20px;
 
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .hero h2 {
-    max-width: 650px;
+    max-width: 680px;
 
     color: white;
 
-    font-size: 43px;
-    line-height: 1.05;
+    font-size: 46px;
+    line-height: 1.1;
+
     font-weight: 800;
 }
 
 .hero h2 span {
-    color: #9fd86b;
+    color: #a8df78;
 }
 
 .hero-content > p {
-    max-width: 570px;
+    max-width: 600px;
 
     color: white;
 
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.6;
 
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 
-/* Caixa de busca */
+/* ================= CAIXA DE BUSCA ================= */
 
 .box-search {
     width: 100%;
 
     background: white;
 
-    border: 3px solid #9fd86b;
+    border: 3px solid #a8df78;
+
     border-radius: 20px;
 
-    padding: 15px 20px;
-    margin-top: 27px;
+    padding: 20px 22px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 .box-search h3 {
     color: #0c0636;
-    font-size: 14px;
-    margin-bottom: 12px;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
 }
 
 .search-fields {
     display: flex;
     align-items: center;
+
     gap: 10px;
 }
 
 .input-box {
-    height: 35px;
+    min-height: 44px;
 
-    border: 1px solid #ddd;
+    border: 1px solid #999;
+
     border-radius: 10px;
 
     display: flex;
     align-items: center;
 
-    padding: 0 10px;
+    padding: 0 12px;
 
     color: #059b9a;
+
     flex: 1;
+
+    background: white;
+}
+
+.input-box img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
 }
 
 .input-box input,
 .input-box select {
     width: 100%;
 
+    min-height: 38px;
+
     border: none;
     outline: none;
 
     font-family: inherit;
-    font-size: 10px;
 
-    color: #555;
+    font-size: 14px;
+
+    color: #333;
+
     background: transparent;
 
-    margin-left: 5px;
+    margin-left: 7px;
+}
+
+.input-box input::placeholder {
+    color: #555;
 }
 
 .search {
-    height: 35px;
+    min-height: 44px;
 
-    padding: 0 17px;
+    padding: 0 20px;
 
     border: none;
-    border-radius: 20px;
+
+    border-radius: 22px;
 
     background: #0c0636;
+
     color: white;
 
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
 }
 
 .search:hover {
@@ -357,29 +413,34 @@ button {
 }
 
 
-/* Selo */
+/* ================= SELO ================= */
 
 .selo-section {
     max-width: 1200px;
     width: 94%;
 
-    margin: 25px auto;
+    margin: 30px auto;
 }
 
 .selo {
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    border: 1px solid #bbb;
 
-    padding: 18px;
+    border-radius: 12px;
+
+    padding: 20px;
 
     display: flex;
+
     align-items: center;
-    gap: 15px;
+
+    gap: 18px;
+
+    background: white;
 }
 
 .selo-icon {
-    min-width: 40px;
-    height: 40px;
+    min-width: 48px;
+    height: 48px;
 
     border-radius: 10px;
 
@@ -389,56 +450,78 @@ button {
     align-items: center;
     justify-content: center;
 
-    color: #53ba83;
+    color: #319566;
+
+    font-size: 22px;
 }
 
 .selo h3 {
-    font-size: 12px;
+    font-size: 17px;
+
+    color: #11102f;
 }
 
 .selo p {
-    font-size: 9px;
-    color: #666;
+    font-size: 14px;
 
-    margin-top: 4px;
+    line-height: 1.6;
+
+    color: #555;
+
+    margin-top: 5px;
 }
 
 .selo a {
     margin-left: auto;
 
-    color: #059b9a;
+    color: #007f82;
 
-    font-size: 9px;
-    font-weight: 700;
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.selo a:hover {
+    text-decoration: underline;
 }
 
 
-/* Destinos */
+/* ================= DESTINOS ================= */
 
 .destinos {
     width: 94%;
     max-width: 1200px;
 
-    margin: 50px auto;
+    margin: 60px auto;
 }
 
 .section-title {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .section-title h2 {
-    font-size: 25px;
+    font-size: 30px;
+    line-height: 1.3;
 }
 
 .section-title a {
-    color: #059b9a;
+    color: #007f82;
 
-    font-size: 9px;
-    font-weight: 700;
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.section-title a:hover {
+    text-decoration: underline;
 }
 
 .destinos-grid {
@@ -446,21 +529,32 @@ button {
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 12px;
+    gap: 22px;
 }
 
-.card {
-    border: 1px solid #ddd;
 
-    border-radius: 15px;
+/* ================= CARDS DE DESTINO ================= */
+
+.card {
+    border: 1px solid #ccc;
+
+    border-radius: 16px;
 
     overflow: hidden;
 
     background: white;
+
+    transition: 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+
+    transform: translateY(-2px);
 }
 
 .card-image {
-    height: 155px;
+    height: 175px;
 
     position: relative;
 }
@@ -475,66 +569,83 @@ button {
 .selo-card {
     position: absolute;
 
-    top: 8px;
-    left: 8px;
+    top: 10px;
+    left: 10px;
 
-    background: #9fd86b;
+    background: #a8df78;
 
-    padding: 4px 8px;
+    padding: 5px 10px;
 
     border-radius: 10px;
 
-    font-size: 8px;
-    font-weight: 700;
+    font-size: 12px;
+
+    font-weight: bold;
 
     color: #0c0636;
 }
 
 .card-content {
-    padding: 10px;
+    padding: 15px;
+
     position: relative;
+
+    min-height: 145px;
 }
 
 .cidade-avaliacao {
     display: flex;
+
     justify-content: space-between;
+
+    gap: 10px;
 }
 
 .card h3 {
-    font-size: 12px;
+    font-size: 17px;
+
+    line-height: 1.3;
 }
 
 .card small {
-    font-size: 8px;
+    font-size: 13px;
+
     color: #555;
 }
 
 .cidade-avaliacao > span {
-    color: #75b94d;
+    color: #579b35;
 
-    font-size: 8px;
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
 }
 
 .card-content > p {
-    font-size: 8px;
+    font-size: 13px;
+
     color: #555;
 
-    margin-top: 10px;
+    margin-top: 14px;
 }
 
 .card strong {
     display: block;
 
-    font-size: 16px;
+    font-size: 19px;
 
     color: #111;
+
+    margin-top: 2px;
 }
 
 .card button {
     position: absolute;
 
-    right: 10px;
-    bottom: 9px;
+    right: 15px;
+    bottom: 15px;
 
     border: none;
 
@@ -542,27 +653,37 @@ button {
 
     color: white;
 
-    padding: 6px 10px;
+    min-height: 40px;
+
+    padding: 0 15px;
 
     border-radius: 20px;
 
-    font-size: 8px;
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.card button:hover {
+    background: #059b9a;
 }
 
 
-/* Três passos */
+/* ================= TRÊS PASSOS ================= */
 
 .passos {
     width: 94%;
     max-width: 1200px;
 
-    margin: 70px auto;
+    margin: 80px auto;
 }
 
 .passos-title {
     text-align: center;
 
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .passos-title h2 {
@@ -570,11 +691,13 @@ button {
 }
 
 .passos-title p {
-    color: #777;
+    color: #666;
 
-    font-size: 11px;
+    font-size: 15px;
 
-    margin-top: 7px;
+    line-height: 1.6;
+
+    margin-top: 8px;
 }
 
 .passos-grid {
@@ -582,78 +705,86 @@ button {
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 12px;
+    gap: 22px;
 }
 
 .passo {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
 
-    border-radius: 15px;
+    border-radius: 16px;
 
-    padding: 18px;
+    padding: 22px;
 
-    min-height: 120px;
+    min-height: 180px;
 }
 
 .passo-icon {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
     background: #e1f6f5;
 
-    color: #059b9a;
+    color: #007f82;
+
+    font-size: 22px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .passo h3 {
-    font-size: 12px;
+    font-size: 17px;
+
+    line-height: 1.4;
 }
 
 .passo p {
-    color: #777;
+    color: #666;
 
-    font-size: 9px;
+    font-size: 14px;
 
-    line-height: 1.5;
+    line-height: 1.6;
 
-    margin-top: 6px;
+    margin-top: 8px;
 }
 
 
-/* Agência */
+/* ================= AGÊNCIA ================= */
 
 .agencia-section {
     width: 94%;
     max-width: 1200px;
 
-    margin: 60px auto;
+    margin: 70px auto;
 
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 30px;
+    gap: 35px;
 }
 
 .acessibilidade h2 {
-    font-size: 21px;
+    font-size: 27px;
+
+    line-height: 1.3;
 }
 
 .acessibilidade > p {
-    font-size: 10px;
+    font-size: 15px;
 
-    color: #777;
+    color: #666;
 
-    margin-top: 5px;
+    line-height: 1.6;
 
-    max-width: 400px;
+    margin-top: 8px;
+
+    max-width: 500px;
 }
 
 .recursos {
@@ -661,21 +792,23 @@ button {
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 10px;
+    gap: 12px;
 
-    margin-top: 20px;
+    margin-top: 22px;
 }
 
 .recursos span {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
 
-    border-radius: 8px;
+    border-radius: 9px;
 
-    padding: 8px;
+    padding: 12px;
 
-    font-size: 9px;
+    font-size: 13px;
 
-    color: #555;
+    color: #444;
+
+    background: white;
 }
 
 .agencia-card {
@@ -683,41 +816,53 @@ button {
 
     border-radius: 18px;
 
-    padding: 30px;
+    padding: 32px;
 
     color: white;
 }
 
 .agencia-card h2 {
-    font-size: 23px;
+    font-size: 26px;
+
+    line-height: 1.3;
 }
 
 .agencia-card p {
     color: white;
 
-    font-size: 10px;
+    font-size: 15px;
 
-    line-height: 1.5;
+    line-height: 1.6;
 
-    margin: 15px 0;
+    margin: 16px 0 22px;
 }
 
 .agencia-card button {
     border: none;
 
-    background: #9fd86b;
+    background: #a8df78;
 
     color: #0c0636;
 
-    border-radius: 20px;
+    border-radius: 24px;
 
-    padding: 10px 25px;
+    min-height: 46px;
 
-    font-size: 10px;
+    padding: 0 24px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.agencia-card button:hover {
+    background: white;
 }
 
 
-/* Chat */
+/* ================= CHAT ================= */
 
 .chat {
     position: fixed;
@@ -725,10 +870,10 @@ button {
     right: 25px;
     bottom: 25px;
 
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
 
-    border: none;
+    border: 2px solid white;
 
     border-radius: 50%;
 
@@ -736,74 +881,124 @@ button {
 
     color: #0c0636;
 
-    font-size: 20px;
+    font-size: 22px;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+    z-index: 10;
+}
+
+.chat img {
+    width: 28px;
+    height: 28px;
 }
 
 
-/* Rodapé */
+/* ================= RODAPÉ ACESSÍVEL ================= */
 
 footer {
     background: #0c0636;
+
     color: white;
-    padding: 40px 0;
+
+    padding: 50px 0;
+
+    margin-top: 30px;
 }
 
 .footer-content {
     width: 94%;
     max-width: 1200px;
+
     margin: auto;
+
     display: grid;
+
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 40px;
+
+    gap: 50px;
 }
 
-.footer-content h3 {
-    font-size: 16px;
+.footer-logo h3 {
     display: flex;
+
     align-items: center;
-    gap: 8px;
+
+    gap: 12px;
+
+    font-size: 19px;
+
+    line-height: 1.4;
 }
 
-.footer-content h3 img {
-    width: 24px;
-    height: 24px;
+.footer-logo h3 img {
+    width: 50px;
+    height: 50px;
 }
 
 .footer-content h4 {
-    color: #9fd86b;
-    font-size: 12px;
-    margin-bottom: 12px;
+    color: #b4ed68;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    margin-bottom: 18px;
 }
 
 .footer-content p {
     color: white;
-    font-size: 10px;
-    line-height: 1.5;
+
+    font-size: 14px;
+
+    line-height: 1.7;
 }
 
 .footer-logo p {
-    max-width: 200px;
-    margin-top: 10px;
-}
+    max-width: 300px;
 
-.footer-logo img {
-    width: 40px;
-    height: 40px;
+    margin-top: 14px;
 }
 
 .footer-content a {
     display: block;
+
     color: white;
-    font-size: 10px;
-    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+
+    transition: 0.2s;
+}
+
+.footer-content a:hover {
+    color: #b4ed68;
+
+    text-decoration: underline;
 }
 
 
-/* Responsividade */
+/* ================= RESPONSIVIDADE ================= */
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
+
+    .top-container,
+    .header-container,
+    .hero-content,
+    .selo-section,
+    .destinos,
+    .passos,
+    .agencia-section,
+    .footer-content {
+        width: 94%;
+    }
 
     .search-fields {
         flex-wrap: wrap;
@@ -821,11 +1016,304 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .agencia-section {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 750px) {
+
+    .top-bar {
+        min-height: 40px;
+    }
+
+    .links-topo {
+        display: none;
+    }
+
+    .top-container {
+        justify-content: center;
+    }
+
+    .header-container {
+        min-height: 80px;
+    }
+
+    .logo-area img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-text h1 {
+        font-size: 20px;
+    }
+
+    .logo-text p {
+        font-size: 11px;
+    }
+
+    .btn-login {
+        min-height: 44px;
+
+        padding: 0 13px;
+
+        font-size: 12px;
+    }
+
+    #menu {
+        width: max-content;
+
+        margin: 0;
+
+        padding: 0 15px;
+    }
+
+    .menu-container {
+        overflow-x: auto;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero-content > p {
+        font-size: 15px;
+    }
+
+    .search-fields {
+        flex-direction: column;
+    }
+
+    .input-box {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .selo {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .selo a {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .destinos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .passos-grid {
         grid-template-columns: 1fr;
     }
 
+    .agencia-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= CELULAR ================= */
+
+@media (max-width: 500px) {
+
+    .header-container {
+        gap: 10px;
+    }
+
+    .logo-area {
+        gap: 8px;
+    }
+
+    .logo-area img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo-text h1 {
+        font-size: 17px;
+    }
+
+    .logo-text p {
+        font-size: 10px;
+    }
+
+    .btn-login {
+        min-height: 44px;
+
+        padding: 0 11px;
+
+        font-size: 11px;
+    }
+
+    .btn-login img {
+        display: none;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-content {
+        padding: 35px 0;
+    }
+
+    .hero-tag {
+        font-size: 13px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero-content > p {
+        font-size: 15px;
+    }
+
+    .box-search {
+        padding: 18px;
+
+        border-radius: 16px;
+    }
+
+    .box-search h3 {
+        font-size: 16px;
+    }
+
+    .selo {
+        padding: 18px;
+    }
+
+    .selo h3 {
+        font-size: 16px;
+    }
+
+    .selo p {
+        font-size: 14px;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+    .section-title a {
+        font-size: 13px;
+    }
+
+    .destinos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 190px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card small {
+        font-size: 13px;
+    }
+
+    .card strong {
+        font-size: 19px;
+    }
+
+    .card button {
+        min-height: 42px;
+
+        font-size: 13px;
+    }
+
+    .passos-title h2 {
+        font-size: 26px;
+    }
+
+    .passos-title p {
+        font-size: 14px;
+    }
+
+    .passo {
+        min-height: auto;
+    }
+
+    .passo h3 {
+        font-size: 17px;
+    }
+
+    .passo p {
+        font-size: 14px;
+    }
+
+    .recursos {
+        grid-template-columns: 1fr;
+    }
+
+    .recursos span {
+        font-size: 14px;
+    }
+
+    .acessibilidade h2 {
+        font-size: 24px;
+    }
+
+    .acessibilidade > p {
+        font-size: 14px;
+    }
+
+    .agencia-card {
+        padding: 25px;
+    }
+
+    .agencia-card h2 {
+        font-size: 23px;
+    }
+
+    .agencia-card p {
+        font-size: 14px;
+    }
+
+    .agencia-card button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .chat {
+        width: 55px;
+        height: 55px;
+
+        right: 18px;
+        bottom: 18px;
+    }
+
     .footer-content {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .footer-content h3 {
+        font-size: 19px;
+    }
+
+    .footer-content h4 {
+        font-size: 17px;
+    }
+
+    .footer-content p,
+    .footer-content a {
+        font-size: 15px;
     }
 }

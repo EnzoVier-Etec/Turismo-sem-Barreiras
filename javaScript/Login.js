@@ -99,3 +99,17 @@ async function receberRespostaGoogle(response) {
     }
 
 }
+
+const inputSenha = document.getElementById('senha');
+const botaoToggle = document.getElementById('toggle-senha');
+const iconeOlho = document.getElementById('icone-olho');
+
+botaoToggle.addEventListener('click', () => {
+    const estaOculta = inputSenha.type === 'password';
+
+    inputSenha.type = estaOculta ? 'text' : 'password';
+    botaoToggle.setAttribute('aria-label', estaOculta ? 'Ocultar senha' : 'Mostrar senha');
+
+    // Opcional: troca o ícone (precisa ter as duas imagens)
+    iconeOlho.src = estaOculta ? 'assets/olho.png' : 'assets/olho-fechado.png';
+});

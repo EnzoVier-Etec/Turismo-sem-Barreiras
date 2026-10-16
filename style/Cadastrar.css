@@ -56,70 +56,76 @@ a {
     text-decoration: none;
 }
 
-/* Barra superior */
 .top-bar {
-    height: 36px;
+    min-height: 42px;
     background: #f5f5f5;
-    border-bottom: 1px solid #e5e5e5;
-    font-size: 14px;
+    border-bottom: 1px solid #ddd;
 }
 
 .top-container {
     width: 94%;
     max-width: 1200px;
-    height: 100%;
-    margin: auto;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 45px;
-}
-
-.telefone {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-
-    font-size: 12px;
-    color: #555;
-}
-
-.telefone img {
-    width: 18px;
-    height: 18px;
-}
-
-.links-topo {
-    display: flex;
-    gap: 45px;
-}
-
-.links-topo a {
-    color: #555;
-    font-size: 12px;
-}
-
-.links-topo a:hover {
-    color: #059b9a;
-}
-
-
-/* Cabeçalho */
-.header {
-    background: white;
-    border-bottom: 1px solid #eeeeee;
-}
-
-.header-container {
-    width: 94%;
-    max-width: 1200px;
-    height: 70px;
+    min-height: 42px;
     margin: auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    gap: 30px;
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    color: #444;
+}
+
+.telefone img {
+    width: 20px;
+    height: 20px;
+}
+
+.links-topo {
+    display: flex;
+    gap: 35px;
+}
+
+.links-topo a {
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.links-topo a:hover {
+    color: #007f82;
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+.header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+    width: 94%;
+    max-width: 1200px;
+    min-height: 80px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
 }
 
 .logo-area {
@@ -129,37 +135,37 @@ a {
 }
 
 .logo-area > img {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     object-fit: contain;
 }
 
 .logo-text h1 {
-    font-size: 23px;
+    font-size: 24px;
     color: #0c0636;
-    margin-bottom: 0;
+    line-height: 1.2;
 }
 
 .logo-text h1 span {
-    color: #059b9a;
+    color: #008f92;
 }
 
 .logo-text p {
-    color: #555;
-    font-size: 12px;
-    margin-top: 2px;
+    color: #666;
+    font-size: 13px;
+    margin-top: 4px;
 }
 
 .btn-login {
+    min-height: 44px;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
+
     gap: 8px;
-
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    padding: 8px 17px;
-
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 600;
 
     color: #0c0636;
@@ -167,8 +173,8 @@ a {
 }
 
 .btn-login img {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
 }
 
 .btn-login:hover {
@@ -176,60 +182,62 @@ a {
 }
 
 
-/* Menu */
+
+/* ==================================================
+   MENU
+================================================== */
+
 .menu-container {
-    height: 58px;
-    border-bottom: 1px solid #eee;
+    background: white;
+    border-bottom: 1px solid #ddd;
 }
 
 #menu {
+    width: 94%;
     max-width: 1200px;
-    height: 100%;
-    margin-left: calc((100% - 1200px) / 2); /* serve para dar o espaçamento dos link para as bordas */
+    min-height: 62px;
+    margin: auto;
 
     display: flex;
-    align-items: center;
-    gap: 27px;
+    align-items: stretch;
+    gap: 28px;
 }
 
 #menu a {
-    height: 100%;
+    min-height: 62px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    gap: 4px;
+    gap: 5px;
 
-    text-decoration: none;
-    color: #555;
-    font-size: 12px;
+    color: #444;
 
-    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    border-bottom: 3px solid transparent;
+
+    transition: 0.2s;
 }
 
 #menu a img {
-    width: 19px;
-    height: 19px;
+    width: 21px;
+    height: 21px;
     object-fit: contain;
 }
 
-#menu a.active {
-    color: #009fa3;
+#menu a:hover {
+    color: #008f92;
 }
 
-/* O after é o comando resposável  palo sublinado de baixo do link( Para isso não podemos definir o link-decor: como none )*/
-#menu a.active::after {
-    content: "";
-
-    position: absolute;
-    bottom: 0;
-
-    width: 100%;
-    height: 2px;
-
-    background: #009fa3;
+#menu a.active {
+    color: #008f92;
+    border-bottom-color: #008f92;
 }
 
 /* Dados para o login */
@@ -263,6 +271,33 @@ a {
 
     margin: auto;
     padding-top: 30px;
+}
+
+/* Botão mostrar senha */
+.campo-senha {
+    position: relative;
+}
+
+.campo-senha input {
+    width: 100%;
+    padding-right: 45px; /* espaço para o botão não ficar sobre o texto */
+    box-sizing: border-box;
+}
+
+.campo-senha button {
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-55%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.campo-senha button img {
+    width: 22px;
+    height: 22px;
 }
 
 /* Botões tipo de usario*/
